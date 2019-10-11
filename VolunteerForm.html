@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./styles/styles.css">
+    
+    <title>Volunteer Sign-up</title>
+</head>
+<body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Volunteer Form</h1>
+                <hr class="my-4">
+            </div>
+
+            <form id="Volunteer-form">
+                <legend>Personal Info</legend>
+            <fieldset class="form-group">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+
+            <div>
+                <p>Address</p>
+                <textarea rows="4" cols="68" placeholder="Enter Your Address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone #</label>
+                <input type="number" class="form-control" id="phone">
+            </div>
+
+            <div class="form-group">T-shirt size
+                <select class="form-control" id="size">
+                    <option value="none">Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">X-Large</option>
+                    <option value="xxlarge">XX-Large</option>
+                </select>
+            </div>
+            </fieldset>
+
+                <legend>Interests</legend>
+                <fieldset class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="events" id="events" name="interests[]">
+                        <label class="form-check-label" for="events">
+                            Events
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="fundraising" id="fundraising" name="interests[]">
+                        <label class="form-check-label" for="fundraising">
+                            Fundraising
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="newsletter" id="newsletter" name="interests[]">
+                        <label class="form-check-label" for="newsletter">
+                            Newsletter
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="volunteer coordination" id="volunteer coordination" name="interests[]">
+                        <label class="form-check-label" for="volunteer coordination">
+                            Volunteer Coordination
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="mentoring" id="mentoring" name="interests[]">
+                        <label class="form-check-label" for="mentoring">
+                            Mentoring
+                        </label>
+                    </div>
+                </fieldset>
+
+                <legend>Special Skills/Qualifications</legend>
+                <fieldset class="form-group">
+                    <p>Summarize special skills and qualifications from employment, previous volunteer work, or other activities
+                    including sports and hobbies.</p>
+                    <textarea rows="12" cols="68"></textarea>
+                </fieldset>
+
+                <legend>Previous Volunteer Work</legend>
+                <fieldset class="form-group">
+                    <p>Summarize previous volunteer work if any</p>
+                    <textarea rows="12" cols="50"></textarea>
+                </fieldset>
+
+                <legend>Volunteer Availability</legend>
+                <fieldset class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="monday" id="monday" name="day[]">
+                        <label class="form-check-label" for="monday">
+                            Monday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="tuesday" id="tuesday" name="day[]">
+                        <label class="form-check-label" for="tuesday">
+                            Tuesday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="wednesday" id="wednesday" name="day[]">
+                        <label class="form-check-label" for="wednesday">
+                            Wednesday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="thursday" id="thursday" name="day[]">
+                        <label class="form-check-label" for="thursday">
+                            Thursday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="friday" id="friday" name="day[]">
+                        <label class="form-check-label" for="friday">
+                            Friday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="saturday" id="saturday" name="day[]">
+                        <label class="form-check-label" for="saturday">
+                            Saturday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sunday" id="sunday" name="day[]">
+                        <label class="form-check-label" for="sunday">
+                            Sunday
+                        </label>
+                    </div>
+                </fieldset>
+
+                <legend id="referenceLegend">Character Reference</legend>
+                <fieldset class="form-group">
+                    <br>
+                    <ul class="ref">
+                        
+                        <div class="form-group">
+                            <label for="refName">Reference Full Name</label>
+                            <input type="text" class="form-control" id="refName">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="refphone">Phone #</label>
+                            <input type="number" class="form-control" id="refphone1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="relation">Relation</label>
+                            <input type="text" class="form-control" id="relation1">
+                        </div>
+                    </ul>
+                    <br>
+                    
+                    <a href="#referenceLegend"><button class="btn btn-primary" id="newref" type="button">Add Reference</button></a>
+
+                </fieldset>
+
+                <legend>How did you hear about us</legend>
+                <fieldset>
+                <div class="form-group">
+                        <select class="form-control" id="howdidyouhear">
+                            <option value="none">Select One</option>
+                            <option value="friend">Word of Mouth/Friend/Colleague</option>
+                            <option value="web">Web/Social Media</option>
+                            <option value="print">Poster/Flyer</option>
+                            <option value="sponsor">Corporate Sponsor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <legend>Notice</legend>
+                <fieldset class="form-group">
+                    <p>Upon submission of this application I consent to a background check.</p>
+                    <input type="radio" name="yes" value="yes"> Yes
+                    <input type="radio" name="no" value="no"> No
+                </fieldset>
+
+                <legend>Agreement</legend>
+                <fieldset class="form-group">
+                    <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
+                    I understand that if I am accepted as a volunteer, any false statements, omissions, or other
+                    misrepresentations made by me on this application may result in immediate dismissal.</p>
+                    <label for="signature">Signature</label>
+                    <input type="text" class="form-control" id="signature">
+                    <br>
+                    <label for="date">Date</label>
+                    <input class="datepicker" name="date" data-date-format="mm/dd/yyyy">
+
+                </fieldset>
+
+                <legend>Our Policy</legend>
+                <fieldset class="form-group">
+                    <p>it is the policy of this orginization to provide equal opportunities without regard to
+                    race, color, religion, national origin, gender, sexual preference, age, or disability.</p>
+                </fieldset>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./scripts/form.js"></script>
+</body>
+</html>

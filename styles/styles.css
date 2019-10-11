@@ -1,0 +1,18 @@
+fieldset {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+#ref2 {
+    display: none;
+}
+
+#ref3 {
+    display: none;
+}
+#ref4 {
+    display: none;
+}
+#ref5 {
+    display: none;
+}
