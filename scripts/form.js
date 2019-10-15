@@ -7,4 +7,24 @@ $("#newref").click(function(){
   $(document).ready(function(){
     $('select').formSelect();
   });
-        
+
+  /*
+    add a mouse over for pulsate on the add
+    references button, remove it on mouse out
+ */
+$("#newref").mouseover(function() {
+    $("a").addClass("pulse");
+});
+$("#newref").mouseout(function(){
+    $("a").removeClass("pulse");
+});
+/*
+    add a mouse over for pulsate on the submit button,
+    remove it on mouse out
+ */
+$("#submit").mouseover(function(){
+    $("button").addClass("pulse");
+});
+$("#submit").mouseout(function(){
+    $("button").removeClass("pulse");
+});
