@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div class="container">
     <div class="row">
         <div class="col s12">
             <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
@@ -124,7 +125,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="hobbies" class="materialize-textarea"></textarea>
-                    <label for="hobbies">Summarize special skills and qualifications from employment, previous volunteer work, or other
+                    <label for="hobbies">Summarize special skills and qualifications from employment, previous volunteer
+                        work, or other
                         activities
                         including sports and hobbies.</label>
                 </div>
@@ -139,7 +141,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="volunteer-work" class="materialize-textarea"></textarea>
-                    <label for="volunteer-work">Summarize any previous volunteer work you might have done in the past.</label>
+                    <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
+                        past.</label>
                 </div>
                 <div class="input-field col s12">
                     <p>
@@ -196,13 +199,12 @@
             <div class="section">
                 <h5>Volunteer Roles</h5>
             </div>
-
-            <label></label>
-
+4
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="volunteer-work" class="materialize-textarea"></textarea>
-                    <label for="volunteer-work">Please detail volunteer roles that interest you. We want to ensure we utilize your skills.</label>
+                    <label for="volunteer-work">Please detail volunteer roles that interest you. We want to ensure we
+                        utilize your skills.</label>
                 </div>
                 <div class="input-field col s12">
                     <p>
@@ -214,55 +216,51 @@
                 </div>
             </div>
 
-<!-- References -->
-<div class="divider"></div>
-<div class="section">
-    <h5>References</h5>
-</div>
+            <!-- References -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>References</h5>
+            </div>
 
-<label>Enter any references you would like to include.</label>
+            <h6 id="referenceLegend">Enter any references you would like to include.</h6>
 
-<div class="row">
-    
-</div>
+            <div class="row">
 
-
-
-<!-- CURRENTLY REWORKING THE REFERENCES -->
-
-
-
-
-            <legend id="referenceLegend">Character Reference</legend>
-            <fieldset class="form-group">
-                <br>
-                <ul class="ref">
-
-                    <div class="form-group">
-                        <label for="refName">Reference Full Name</label>
-                        <input type="text" class="form-control" id="refName">
+                <div class="ref">
+                    <div class="input-field col s6">
+                        <label for="refName">Reference First Name</label>
+                        <input type="text" class="form-control" id="refFirstName">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-field col s6">
+                        <label for="refName">Reference Last Name</label>
+                        <input type="text" class="form-control" id="refLastName">
+                    </div>
+
+                    <div class="input-field col s12">
                         <label for="refphone">Phone #</label>
                         <input type="number" class="form-control" id="refphone1">
                     </div>
 
-                    <div class="form-group">
+                    <div class="input-field col s12">
                         <label for="relation">Relation</label>
                         <input type="text" class="form-control" id="relation1">
                     </div>
-                </ul>
+                </div>
                 <br>
+            </div>
+                <button class="btn-floating pulse btn-large waves-effect waves-light red"><a href="#referenceLegend" id="newref"><i class="material-icons">add</i></a></button>
+
 
                 <a href="#referenceLegend" id="newref" class="btn-floating btn-large waves-effect waves-light red"><i
                         class="material-icons">add</i></a>
 
-                <!-- <a href="#referenceLegend"><button class="btn btn-primary" id="newref" type="button">Add Reference</button></a> -->
 
-            </fieldset>
 
-            <legend>How did you hear about us</legend>
+
+            
+
+            <legend class="subref">How did you hear about us</legend>
             <fieldset>
                 <div class="form-group">
                     <select class="form-control" id="howdidyouhear">
@@ -276,14 +274,14 @@
                 </div>
             </fieldset>
 
-            <legend>Notice</legend>
+            <legend class="subref">Notice</legend>
             <fieldset class="form-group">
                 <p>Upon submission of this application I consent to a background check.</p>
                 <input type="radio" name="yes" value="yes"> Yes
                 <input type="radio" name="no" value="no"> No
             </fieldset>
 
-            <legend>Agreement</legend>
+            <legend class="subref">Agreement</legend>
             <fieldset class="form-group">
                 <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
                     I understand that if I am accepted as a volunteer, any false statements, omissions, or other
@@ -292,11 +290,11 @@
                 <input type="text" class="form-control" id="signature">
                 <br>
                 <label for="date">Date</label>
-                <input class="datepicker" name="date" data-date-format="mm/dd/yyyy">
+                <input name="date" type="text" class="datepicker">
 
             </fieldset>
 
-            <legend>Our Policy</legend>
+            <legend class="subref">Our Policy</legend>
             <fieldset class="form-group">
                 <p>it is the policy of this orginization to provide equal opportunities without regard to
                     race, color, religion, national origin, gender, sexual preference, age, or disability.</p>
@@ -309,7 +307,7 @@
 
         </form>
     </div>
-
+</div> <!--container-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
