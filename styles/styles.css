@@ -19,3 +19,14 @@ fieldset {
 #ref5 {
     display: none;
 }
+.header {
+    font-family: Trattatello, fantasy;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 2px 2px lightgray;
+}
+h5, .subref {
+    font-family: Impact, fantasy;
+    font-weight: bold;
+    text-align: center;
+}
