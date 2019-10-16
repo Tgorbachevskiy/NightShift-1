@@ -222,10 +222,8 @@
             <div class="section">
                 <h5>References</h5>
             </div>
-
-            <h6 id="referenceLegend">Enter any references you would like to include.</h6>
-
             <div class="row">
+                <h6 id="referenceLegend">Enter any references you would like to include.</h6>
 
                 <div class="ref">
                     <div class="input-field col s6">
@@ -249,37 +247,65 @@
                     </div>
                 </div>
                 <br>
+
+                <!-- Button to add another set of fields for another refernces-->
+                <a href="#referenceLegend">
+                    <button class="btn-floating btn-large waves-effect waves-light red" id="newref">
+                        <i class="material-icons">add</i>
+                    </button>
+                </a>
             </div>
-                <button class="btn-floating pulse btn-large waves-effect waves-light red"><a href="#referenceLegend" id="newref"><i class="material-icons">add</i></a></button>
+
+                <button class="btn-floating btn-large waves-effect waves-light red"><a href="#referenceLegend" id="newref"><i class="material-icons">add</i></a></button>
 
 
+                <a href="#referenceLegend" id="newref" class="btn-floating btn-large waves-effect waves-light red"><i
+                        class="material-icons">add</i></a>
 
-
+            <!-- How Did you Hear About us  -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>How did you hear about us</h5>
+            </div>
             
+                <select class="input-field col s12" id="howdidyouhear">
+                    <option value="none">Select One</option>
+                    <option value="friend">Word of Mouth/Friend/Colleague</option>
+                    <option value="web">Web/Social Media</option>
+                    <option value="print">Poster/Flyer</option>
+                    <option value="sponsor">Corporate Sponsor</option>
+                    <option value="other">Other</option>
+                </select>
 
-            <legend class="subref">How did you hear about us</legend>
-            <fieldset>
-                <div class="form-group">
-                    <select class="form-control" id="howdidyouhear">
-                        <option value="none">Select One</option>
-                        <option value="friend">Word of Mouth/Friend/Colleague</option>
-                        <option value="web">Web/Social Media</option>
-                        <option value="print">Poster/Flyer</option>
-                        <option value="sponsor">Corporate Sponsor</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </fieldset>
+            <!-- Background Check Notice-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Consent to Background Check</h5>
+            </div>
 
-            <legend class="subref">Notice</legend>
-            <fieldset class="form-group">
                 <p>Upon submission of this application I consent to a background check.</p>
-                <input type="radio" name="yes" value="yes"> Yes
-                <input type="radio" name="no" value="no"> No
-            </fieldset>
+                <p>
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>Yes</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" checked/>
+                        <span>No</span>
+                    </label>
+                </p>            
+
+            <!-- Signature and date-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Agreement</h5>
+            </div>
 
             <legend class="subref">Agreement</legend>
             <fieldset class="form-group">
+
                 <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
                     I understand that if I am accepted as a volunteer, any false statements, omissions, or other
                     misrepresentations made by me on this application may result in immediate dismissal.</p>
@@ -287,20 +313,27 @@
                 <input type="text" class="form-control" id="signature">
                 <br>
                 <label for="date">Date</label>
-                <input name="date" type="text" class="datepicker" id="date">
 
-            </fieldset>
+                <input name="date" type="text" class="datepicker">
 
-            <legend class="subref">Our Policy</legend>
-            <fieldset class="form-group">
-                <p>it is the policy of this orginization to provide equal opportunities without regard to
-                    race, color, religion, national origin, gender, sexual preference, age, or disability.</p>
-            </fieldset>
+                <input name="date" type="text" class="datepicker">                
 
 
-             <button class="btn pulse waves-effect waves-light red" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-        </button>
+            <!-- Policy -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Policy</h5>
+            </div>
+            
+                <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                    race, color, religion, national origin, gender, sexual preference, age, or disability.
+                </h6>
+
+
+            <button class="btn pulse waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+
 
         </form>
     </div>
