@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div class="container">
     <div class="row">
         <div class="col s12">
             <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
@@ -223,8 +224,6 @@
             <div class="row">
                 <h6 id="referenceLegend">Enter any references you would like to include.</h6>
 
-
-
                 <div class="ref">
                     <div class="input-field col s6">
                         <label for="refName">Reference First Name</label>
@@ -256,8 +255,11 @@
                 </a>
             </div>
 
+                <button class="btn-floating btn-large waves-effect waves-light red"><a href="#referenceLegend" id="newref"><i class="material-icons">add</i></a></button>
 
 
+                <a href="#referenceLegend" id="newref" class="btn-floating btn-large waves-effect waves-light red"><i
+                        class="material-icons">add</i></a>
 
             <!-- How Did you Hear About us  -->
             <div class="divider"></div>
@@ -273,7 +275,6 @@
                     <option value="sponsor">Corporate Sponsor</option>
                     <option value="other">Other</option>
                 </select>
-
 
             <!-- Background Check Notice-->
             <div class="divider"></div>
@@ -293,8 +294,7 @@
                         <input class="with-gap" name="group1" type="radio" checked/>
                         <span>No</span>
                     </label>
-                </p>
-            
+                </p>            
 
             <!-- Signature and date-->
             <div class="divider"></div>
@@ -302,7 +302,9 @@
                 <h5>Agreement</h5>
             </div>
 
-            
+            <legend class="subref">Agreement</legend>
+            <fieldset class="form-group">
+
                 <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
                     I understand that if I am accepted as a volunteer, any false statements, omissions, or other
                     misrepresentations made by me on this application may result in immediate dismissal.</p>
@@ -310,9 +312,7 @@
                 <input type="text" class="form-control" id="signature">
                 <br>
                 <label for="date">Date</label>
-                <input name="date" type="text" class="datepicker">
-
-                
+                <input name="date" type="text" class="datepicker">                
 
             <!-- Policy -->
             <div class="divider"></div>
@@ -323,16 +323,16 @@
                 <h6>It is the policy of this orginization to provide equal opportunities without regard to
                     race, color, religion, national origin, gender, sexual preference, age, or disability.
                 </h6>
-            
 
 
             <button class="btn pulse waves-effect waves-light red" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
 
+
         </form>
     </div>
-
+</div> <!--container-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
