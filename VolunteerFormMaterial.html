@@ -13,6 +13,8 @@
 </head>
 
 <body>
+<!--main container-->
+<div class="container" >
     <div class="row">
         <div class="col s12">
             <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
@@ -201,7 +203,7 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="volunteer-work" class="materialize-textarea"></textarea>
+                    <textarea id="volunteer-role" class="materialize-textarea"></textarea>
                     <label for="volunteer-work">Please detail volunteer roles that interest you. We want to ensure we
                         utilize your skills.</label>
                 </div>
@@ -223,17 +225,20 @@
             <div class="row">
                 <h6 id="referenceLegend">Enter any references you would like to include.</h6>
 
-
-
                 <div class="ref">
                     <div class="input-field col s6">
-                        <label for="refName">Reference First Name</label>
+                        <label for="refFirstName">Reference First Name</label>
                         <input type="text" class="form-control" id="refFirstName">
                     </div>
 
                     <div class="input-field col s6">
-                        <label for="refName">Reference Last Name</label>
+                        <label for="refLastName">Reference Last Name</label>
                         <input type="text" class="form-control" id="refLastName">
+                    </div>
+
+                    <div class="input-field col s12">
+                        <label for="refphone1">Phone #</label>
+                        <input type="number" class="form-control" id="refphone1">
                     </div>
 
                     <div class="input-field col s12">
@@ -242,28 +247,18 @@
                     </div>
 
                     <div class="input-field col s12">
-                        <label for="refphone">Phone #</label>
-                        <input type="number" class="form-control" id="refphone1">
-                    </div>
-
-                    <div class="input-field col s12">
-                        <label for="relation">Relation</label>
+                        <label for="relation1">Relation</label>
                         <input type="text" class="form-control" id="relation1">
                     </div>
                 </div>
                 <br>
 
                 <!-- Button to add another set of fields for another refernces-->
-                <a href="#referenceLegend">
-                    <button class="btn-floating btn-large waves-effect waves-light red" id="newref">
+                <a href="#referenceLegend"
+                     class="btn-floating btn-large waves-effect waves-light red" id="newref">
                         <i class="material-icons">add</i>
-                    </button>
                 </a>
             </div>
-
-
-
-
             <!-- How Did you Hear About us  -->
             <div class="divider"></div>
             <div class="section">
@@ -278,8 +273,7 @@
                     <option value="sponsor">Corporate Sponsor</option>
                     <option value="other">Other</option>
                 </select>
-
-
+                <br>
             <!-- Background Check Notice-->
             <div class="divider"></div>
             <div class="section">
@@ -298,8 +292,7 @@
                         <input class="with-gap" name="group1" type="radio" checked/>
                         <span>No</span>
                     </label>
-                </p>
-            
+                </p>            
 
             <!-- Signature and date-->
             <div class="divider"></div>
@@ -308,6 +301,8 @@
             </div>
 
             
+            
+
                 <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
                     I understand that if I am accepted as a volunteer, any false statements, omissions, or other
                     misrepresentations made by me on this application may result in immediate dismissal.</p>
@@ -315,9 +310,9 @@
                 <input type="text" class="form-control" id="signature">
                 <br>
                 <label for="date">Date</label>
-                <input name="date" type="text" class="datepicker">
 
-                
+                <input name="date" type="text" class="datepicker" id="date">
+<br>
 
             <!-- Policy -->
             <div class="divider"></div>
@@ -328,16 +323,14 @@
                 <h6>It is the policy of this orginization to provide equal opportunities without regard to
                     race, color, religion, national origin, gender, sexual preference, age, or disability.
                 </h6>
-            
 
-
-            <button class="btn pulse waves-effect waves-light red" type="submit" name="action">Submit
+<br>
+            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
-
         </form>
     </div>
-
+</div> <!--container-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
