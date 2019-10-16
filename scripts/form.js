@@ -1,5 +1,7 @@
 //Add a new reference
-let referenceForm = '<div class="ref"><div class="input-field col s6"><label for="refFirstName">Reference First Name</label><input type="text" class="form-control" id="refFirstName"></div><div class="input-field col s6"><label for="refLastName">Reference Last Name</label><input type="text" class="form-control" id="refLastName"></div><div class="input-field col s12"><label for="refphone1">Phone #</label><input type="number" class="form-control" id="refphone1"></div><div class="input-field col s12"><label for="relation1">Relation</label><input type="text" class="form-control" id="relation1"></div></div><br>';
+
+let referenceForm = '<div class="ref"><div class="input-field col s6"><label for="refFirstName">Reference First Name</label><input type="text" class="form-control" id="refFirstName"></div><div class="input-field col s6"><label for="refLastName">Reference Last Name</label><input type="text" class="form-control" id="refLastName"></div><div class="input-field col s12"><label for="refphone1">Phone #</label><input type="number" class="form-control" id="refphone1"></div><div class="input-field col s12"><label for="email">E-mail</label><input type="text" class="form-control" id="email"></div><div class="input-field col s12"><label for="relation1">Relation</label><input type="text" class="form-control" id="relation1"></div></div><br>';
+
 $("#newref").click(function(){
   $(referenceForm).insertAfter("#referenceLegend");
 });
