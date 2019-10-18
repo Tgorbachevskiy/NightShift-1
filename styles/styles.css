@@ -1,5 +1,5 @@
 body {
-	background-color: #f8bbd0;
+    background-color: #eceff1;
 }
 fieldset {
     border: 1px solid black;
@@ -19,14 +19,27 @@ fieldset {
 #ref5 {
     display: none;
 }
+#heads {
+    display: inline-block;
+    width: 100%;
+}
 .header {
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+.img {
+    float: right;
+    display: inline-block;
+}
+/* .header {
     font-family: Trattatello, fantasy;
     font-weight: bolder;
     text-align: center;
     text-shadow: 2px 2px lightgray;
 }
 h5, .subref {
-    font-family: Impact, fantasy;
+    font-family: 'Raleway', fantasy;
     font-weight: bold;
     text-align: center;
-}
+} */
