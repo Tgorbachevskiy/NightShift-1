@@ -13,315 +13,328 @@
 </head>
 
 <body>
-<!--main container-->
-<div class="container" >
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
-        </div>
-        <form class="col s12" id="volunteer-form">
-
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Contact Info</h5>
+    <!--main container-->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
             </div>
-            <div class="row">
+            <form class="col s12" id="volunteer-form">
 
-                <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Contact Info</h5>
                 </div>
-                <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">contact_mail</i>
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">location_city</i>
-                    <textarea id="address" class="materialize-textarea"></textarea>
-                    <label for="address">Address</label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">contact_phone</i>
-                    <label for="phone">Phone #</label>
-                    <input type="number" id="phone">
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">accessibility</i>
-                    <select id="size">
-                        <option value="" disabled selected>Select a T-shirt Size</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="xlarge">X-Large</option>
-                        <option value="xxlarge">XX-Large</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Interests -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Interests</h5>
-            </div>
-
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Events</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Fundraising</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Newsletter</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Volunteer Coordination</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Mentoring</span>
-                </label>
-            </p>
-
-
-            <!-- Special Skills/Qualifications -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Special Skills/Qualifications</h5>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="hobbies" class="materialize-textarea"></textarea>
-                    <label for="hobbies">Summarize special skills and qualifications from employment, previous volunteer
-                        work, or other
-                        activities
-                        including sports and hobbies.</label>
-                </div>
-            </div>
-
-            <!-- Previous vounteer exprerience -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Previous Volunteer Experience</h5>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="volunteer-work" class="materialize-textarea"></textarea>
-                    <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
-                        past.</label>
-                </div>
-                <div class="input-field col s12">
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>I have no previous volunteer experience.</span>
-                        </label>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Volunteer Availability -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Volunteer Availability</h5>
-            </div>
-
-            <label>Please select the choices that most fit your volunteer availability: </label>
-
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Weekend Workshop (4-hr shift)</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Weekend Workshop (8-hr shift)</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>1 Week Summer Camp</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Weekday Workshop</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Ongoing Weekday Commitment</span>
-                </label>
-            </p>
-
-
-            <!-- Volunteer Roles -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Volunteer Roles</h5>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="volunteer-role" class="materialize-textarea"></textarea>
-                    <label for="volunteer-work">Please detail volunteer roles that interest you. We want to ensure we
-                        utilize your skills.</label>
-                </div>
-                <div class="input-field col s12">
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>I have no preference.</span>
-                        </label>
-                    </p>
-                </div>
-            </div>
-
-            <!-- References -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>References</h5>
-            </div>
-            <div class="row">
-                <h6 id="referenceLegend">Enter any references you would like to include.</h6>
-
-                <div class="ref">
-                    <div class="input-field col s6">
-                        <label for="refFirstName">Reference First Name</label>
-                        <input type="text" class="form-control" id="refFirstName">
-                    </div>
+                <div class="row">
 
                     <div class="input-field col s6">
-                        <label for="refLastName">Reference Last Name</label>
-                        <input type="text" class="form-control" id="refLastName">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
                     </div>
-
-                    <div class="input-field col s12">
-                        <label for="refphone1">Phone #</label>
-                        <input type="number" class="form-control" id="refphone1">
-                    </div>
-
-                    <div class="input-field col s12">
-                        <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
-
-                    <div class="input-field col s12">
-
-                        <label for="relation1">Relation</label>
-                        <input type="text" class="form-control" id="relation1">
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
                     </div>
                 </div>
-                <br>
-                <div class="ref">
-                    <div class="input-field col s6">
-                        <label for="refFirstName">Reference First Name</label>
-                        <input type="text" class="form-control" id="refFirstName">
-                    </div>
 
-                    <div class="input-field col s6">
-                        <label for="refLastName">Reference Last Name</label>
-                        <input type="text" class="form-control" id="refLastName">
-                    </div>
 
+                <div class="row">
                     <div class="input-field col s12">
-                        <label for="refphone1">Phone #</label>
-                        <input type="number" class="form-control" id="refphone1">
-                    </div>
-
-                    <div class="input-field col s12">
-                        <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
-
-                    <div class="input-field col s12">
-
-                        <label for="relation1">Relation</label>
-                        <input type="text" class="form-control" id="relation1">
+                        <i class="material-icons prefix">contact_mail</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
                     </div>
                 </div>
-                <br>
-                <div class="ref">
-                    <div class="input-field col s6">
-                        <label for="refFirstName">Reference First Name</label>
-                        <input type="text" class="form-control" id="refFirstName">
-                    </div>
 
-                    <div class="input-field col s6">
-                        <label for="refLastName">Reference Last Name</label>
-                        <input type="text" class="form-control" id="refLastName">
-                    </div>
 
+                <div class="row">
                     <div class="input-field col s12">
-                        <label for="refphone1">Phone #</label>
-                        <input type="number" class="form-control" id="refphone1">
-                    </div>
-
-                    <div class="input-field col s12">
-                        <label for="email">E-mail</label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
-
-                    <div class="input-field col s12">
-
-                        <label for="relation1">Relation</label>
-                        <input type="text" class="form-control" id="relation1">
+                        <i class="material-icons prefix">location_city</i>
+                        <textarea id="address" class="materialize-textarea"></textarea>
+                        <label for="address">Address</label>
                     </div>
                 </div>
-                <br>
 
-                <!-- Button to add another set of fields for another refernces-->
-                <a href="#referenceLegend"
-                     class="btn-floating btn-large waves-effect waves-light red" id="newref">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">contact_phone</i>
+                        <label for="phone">Phone #</label>
+                        <input type="number" id="phone">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">accessibility</i>
+                        <select id="size">
+                            <option value="" disabled selected>Select a T-shirt Size</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="xlarge">X-Large</option>
+                            <option value="xxlarge">XX-Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Interests</h5>
+                </div>
+
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Events</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Fundraising</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Newsletter</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Volunteer Coordination</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Mentoring</span>
+                    </label>
+                </p>
+
+
+                <!-- Special Skills/Qualifications -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Special Skills/Qualifications</h5>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="hobbies" class="materialize-textarea"></textarea>
+                        <label for="hobbies">Summarize special skills and qualifications from employment, previous
+                            volunteer
+                            work, or other
+                            activities
+                            including sports and hobbies.</label>
+                    </div>
+                </div>
+
+                <!-- Previous vounteer exprerience -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Previous Volunteer Experience</h5>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="volunteer-work" class="materialize-textarea"></textarea>
+                        <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
+                            past.</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>I have no previous volunteer experience.</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Volunteer Availability -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Volunteer Availability</h5>
+                </div>
+
+                <label>Please select the choices that most fit your volunteer availability: </label>
+
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Weekend Workshop (4-hr shift)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Weekend Workshop (8-hr shift)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>1 Week Summer Camp</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Weekday Workshop</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" />
+                        <span>Ongoing Weekday Commitment</span>
+                    </label>
+                </p>
+
+
+                <!-- Volunteer Roles -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Volunteer Roles</h5>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="volunteer-role" class="materialize-textarea"></textarea>
+                        <label for="volunteer-work">Please detail volunteer roles that interest you. We want to ensure
+                            we
+                            utilize your skills.</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>I have no preference.</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>References</h5>
+                </div>
+                <div class="row">
+                    <h6 id="referenceLegend">Enter any references you would like to include. (3 required)</h6>
+                    <!-- First Reference -->
+                    <div class="ref">
+                        <div class="input-field col s6">
+                            <label for="refFirstName">Reference First Name</label>
+                            <input type="text" class="form-control" id="refFirstName">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <label for="refLastName">Reference Last Name</label>
+                            <input type="text" class="form-control" id="refLastName">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="refphone1">Phone #</label>
+                            <input type="number" class="form-control" id="refphone1">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <label for="relation1">Relation</label>
+                            <input type="text" class="form-control" id="relation1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="divider"></div>
+                    <div class="section"><h5>_______________________________________________________________________________________</h5></div>
+                <!-- Second Reference -->
+                    <div class="ref">
+                        <div class="input-field col s6">
+                            <label for="refFirstName">Reference First Name</label>
+                            <input type="text" class="form-control" id="refFirstName">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <label for="refLastName">Reference Last Name</label>
+                            <input type="text" class="form-control" id="refLastName">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="refphone1">Phone #</label>
+                            <input type="number" class="form-control" id="refphone1">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <label for="relation1">Relation</label>
+                            <input type="text" class="form-control" id="relation1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="divider"></div>
+                    <div class="section"><h5>_______________________________________________________________________________________</h5></div>
+                    <!-- Third Reference -->
+                    <div class="ref">
+                        <div class="input-field col s6">
+                            <label for="refFirstName">Reference First Name</label>
+                            <input type="text" class="form-control" id="refFirstName">
+                        </div>
+
+                        <div class="input-field col s6">
+                            <label for="refLastName">Reference Last Name</label>
+                            <input type="text" class="form-control" id="refLastName">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="refphone1">Phone #</label>
+                            <input type="number" class="form-control" id="refphone1">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <label for="relation1">Relation</label>
+                            <input type="text" class="form-control" id="relation1">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="divider"></div>
+                    <div class="section"><h5>_______________________________________________________________________________________</h5></div>
+                    <!-- Button to add another set of fields for another refernces-->
+                    <a href="#referenceLegend" class="btn-floating btn-large waves-effect waves-light red" id="newref">
                         <i class="material-icons">add</i>
-                </a>
-            </div>
-            <!-- How Did you Hear About us  -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>How did you hear about us</h5>
-            </div>
-            
+                    </a>
+                    <a href="#referenceLegend" class="btn-floating btn-large waves-effect waves-light red" id="delref">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </div>
+
+
+
+                <!-- How Did you Hear About us  -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>How did you hear about us</h5>
+                </div>
+
                 <select class="input-field col s12" id="howdidyouhear">
                     <option value="none">Select One</option>
                     <option value="friend">Word of Mouth/Friend/Colleague</option>
@@ -331,11 +344,11 @@
                     <option value="other">Other</option>
                 </select>
                 <br>
-            <!-- Background Check Notice-->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Consent to Background Check</h5>
-            </div>
+                <!-- Background Check Notice-->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Consent to Background Check</h5>
+                </div>
 
                 <p>Upon submission of this application I consent to a background check.</p>
                 <p>
@@ -346,19 +359,19 @@
                 </p>
                 <p>
                     <label>
-                        <input class="with-gap" name="group1" type="radio" checked/>
+                        <input class="with-gap" name="group1" type="radio" checked />
                         <span>No</span>
                     </label>
-                </p>            
+                </p>
 
-            <!-- Signature and date-->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Agreement</h5>
-            </div>
+                <!-- Signature and date-->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Agreement</h5>
+                </div>
 
-            
-            
+
+
 
                 <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
                     I understand that if I am accepted as a volunteer, any false statements, omissions, or other
@@ -369,25 +382,26 @@
                 <label for="date">Date</label>
 
                 <input name="date" type="text" class="datepicker" id="date">
-<br>
+                <br>
 
-            <!-- Policy -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Policy</h5>
-            </div>
-            
+                <!-- Policy -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Policy</h5>
+                </div>
+
                 <h6>It is the policy of this orginization to provide equal opportunities without regard to
                     race, color, religion, national origin, gender, sexual preference, age, or disability.
                 </h6>
 
-<br>
-            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-            </button>
-        </form>
+                <br>
+                <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
     </div>
-</div> <!--container-->
+    <!--container-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
