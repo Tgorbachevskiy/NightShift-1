@@ -18,11 +18,22 @@
 </head>
 
 <body>
-    <!--main container-->
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <h1 class="header">I-Day Dream Volunteer Sign-up</h1>
+
+<!--main container-->
+<div class="container" >
+    <div class="row">
+        <div class="head">
+            <div class="col s12" id="heads">
+                <h1 class="header">Volunteer Sign-up</h1>
+                <img class="img" src="images/idaydream.png" style="display: inline-block" alt="logo">
+            </div>
+        </div>
+        <form class="col s12" id="volunteer-form">
+
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Contact Info</h5>
+
             </div>
             <form class="col s12" id="volunteer-form">
 
@@ -354,6 +365,7 @@
                     <h5>How did you hear about us</h5>
                 </div>
 
+
                 <select class="input-field col s12" id="howdidyouhear">
                     <option value="none">Select One</option>
                     <option value="friend">Word of Mouth/Friend/Colleague</option>
@@ -390,46 +402,47 @@
                 </div>
 
 
+            <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
+                I understand that if I am accepted as a volunteer, any false statements, omissions, or other
+                misrepresentations made by me on this application may result in immediate dismissal.</p>
+            <label for="signature">Signature</label>
+            <input type="text" class="form-control" id="signature">
+            <br>
+            <label for="date">Date</label>
 
+            <input name="date" type="text" class="datepicker" id="date">
+            <br>
 
-                <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
-                    I understand that if I am accepted as a volunteer, any false statements, omissions, or other
-                    misrepresentations made by me on this application may result in immediate dismissal.</p>
-                <label for="signature">Signature</label>
-                <input type="text" class="form-control" id="signature">
-                <br>
-                <label for="date">Date</label>
+            <!-- Policy -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Policy</h5>
+            </div>
 
-                <input name="date" type="text" class="datepicker" id="date">
-                <br>
+            <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                race, color, religion, national origin, gender, sexual preference, age, or disability.
+            </h6>
 
-                <!-- Policy -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Policy</h5>
-                </div>
+            <br>
 
-                <h6>It is the policy of this orginization to provide equal opportunities without regard to
-                    race, color, religion, national origin, gender, sexual preference, age, or disability.
-                </h6>
+            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
 
-                <br>
-                <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-            </form>
-        </div>
     </div>
     <!--container-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="./scripts/form.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./scripts/form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
