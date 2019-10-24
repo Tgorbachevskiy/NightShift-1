@@ -21,7 +21,7 @@ $("#submit").mouseout(function () {
 //Show/Hide functions
 $("#noExperience").click(function(){
   $("#prevExperience").toggle();
-})
+});
 $("#noPref").click(function(){
   $("#rolePref").toggle();
-})
+});
