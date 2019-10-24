@@ -21,8 +21,3 @@ $("#submit").mouseover(function () {
 $("#submit").mouseout(function () {
   $("button").removeClass("pulse");
 });
-
-
-$(document).ready(function () {
-  $('.datepicker').datepicker();
-});
