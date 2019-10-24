@@ -37,6 +37,7 @@
             </div>
             <form class="col s12" id="volunteer-form">
 
+                <!-- Contact Info -->
                 <div class="divider"></div>
                 <div class="section">
                     <h5>Contact Info</h5>
@@ -95,6 +96,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Interests -->
                 <div class="divider"></div>
                 <div class="section">
@@ -363,73 +365,75 @@
                 <div class="divider"></div>
                 <div class="section">
                     <h5>How did you hear about us</h5>
+
+
+                    <select class="input-field col s12" id="howdidyouhear">
+                        <option value="none">Select One</option>
+                        <option value="friend">Word of Mouth/Friend/Colleague</option>
+                        <option value="web">Web/Social Media</option>
+                        <option value="print">Poster/Flyer</option>
+                        <option value="sponsor">Corporate Sponsor</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
                 </div>
 
 
-                <select class="input-field col s12" id="howdidyouhear">
-                    <option value="none">Select One</option>
-                    <option value="friend">Word of Mouth/Friend/Colleague</option>
-                    <option value="web">Web/Social Media</option>
-                    <option value="print">Poster/Flyer</option>
-                    <option value="sponsor">Corporate Sponsor</option>
-                    <option value="other">Other</option>
-                </select>
-                <br>
                 <!-- Background Check Notice-->
                 <div class="divider"></div>
                 <div class="section">
                     <h5>Consent to Background Check</h5>
-                </div>
 
-                <p>Upon submission of this application I consent to a background check.</p>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group1" type="radio" />
-                        <span>Yes</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group1" type="radio" checked />
-                        <span>No</span>
-                    </label>
-                </p>
+
+                    <p>Upon submission of this application I consent to a background check.</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" checked />
+                            <span>No</span>
+                        </label>
+                    </p>
+                </div>
 
                 <!-- Signature and date-->
                 <div class="divider"></div>
                 <div class="section">
                     <h5>Agreement</h5>
+
+                    <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
+                        I understand that if I am accepted as a volunteer, any false statements, omissions, or other
+                        misrepresentations made by me on this application may result in immediate dismissal.</p>
+                    <label for="signature">Signature</label>
+                    <input type="text" class="form-control" id="signature">
+                    <br>
+
+                    <label for="date">Date</label>
+                    <input name="date" type="text" class="datepicker" id="date">
+                    <br>
                 </div>
 
+                <!-- Policy -->
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Policy</h5>
 
-            <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
-                I understand that if I am accepted as a volunteer, any false statements, omissions, or other
-                misrepresentations made by me on this application may result in immediate dismissal.</p>
-            <label for="signature">Signature</label>
-            <input type="text" class="form-control" id="signature">
-            <br>
-            <label for="date">Date</label>
+                    <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                        race, color, religion, national origin, gender, sexual preference, age, or disability.
+                    </h6>
+                    <br>
+                </div>
 
-            <input name="date" type="text" class="datepicker" id="date">
-            <br>
-
-            <!-- Policy -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Policy</h5>
-            </div>
-
-            <h6>It is the policy of this orginization to provide equal opportunities without regard to
-                race, color, religion, national origin, gender, sexual preference, age, or disability.
-            </h6>
-
-            <br>
-
-            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-            </button>
-        </form>
-
+                <!-- Submit btn -->
+                <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
     </div>
     <!--container-->
 
