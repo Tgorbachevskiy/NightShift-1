@@ -6,10 +6,6 @@ $(document).ready(function () {
 $(document).ready(function(){
   $('.collapsible').collapsible();
 });
-//Initialize datepicker
-$(document).ready(function () {
-  $('.datepicker').datepicker();
-});
 
 /*
     add a mouse over for pulsate on the submit button,
@@ -22,7 +18,10 @@ $("#submit").mouseout(function () {
   $("button").removeClass("pulse");
 });
 
-
-$(document).ready(function () {
-  $('.datepicker').datepicker();
+//Show/Hide functions
+$("#noExperience").click(function(){
+  $("#prevExperience").toggle();
+});
+$("#noPref").click(function(){
+  $("#rolePref").toggle();
 });

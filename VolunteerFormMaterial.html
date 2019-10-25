@@ -17,24 +17,24 @@
     <title>Volunteer Sign-up</title>
 </head>
 
-<body>
+<body class="blue-grey lighten-5">
 
-<!--main container-->
-<div class="container" >
-    <div class="row">
-        <div class="head">
-            <div class="col s12" id="heads">
-                <h1 class="header">Volunteer Sign-up</h1>
-                <img class="img" src="images/idaydream.png" style="display: inline-block" alt="logo">
-            </div>
+    <!--main container-->
+    <div class="container">
+        <div class="row">
+            <h1 class="header col s6">Volunteer Sign-up</h1>
+            <img class="img col offset-s4 s2" src="images/idaydream.png" alt="logo">
         </div>
-            <!-- Start Form-->
-            <form class="col s12" id="volunteer-form">
 
-                <!-- Contact Info -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Contact Info</h5>
+
+        <form class="col s12" id="volunteer-form">
+
+            <!-- Contact Info -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Contact Info</h5>
+
+                <div class="card-panel">
 
                     <div class="row">
 
@@ -90,13 +90,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Interests -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Interests</h5>
+            <!-- Interests -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Interests</h5>
 
-
+                <div class="card-panel">
                     <p>
                         <label>
                             <input type="checkbox" />
@@ -128,15 +129,15 @@
                         </label>
                     </p>
                 </div>
+            </div>
 
 
+            <!-- Special Skills/Qualifications -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Special Skills/Qualifications</h5>
 
-                <!-- Special Skills/Qualifications -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Special Skills/Qualifications</h5>
-
-
+                <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea id="hobbies" class="materialize-textarea"></textarea>
@@ -148,17 +149,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
 
+            <!-- Previous vounteer exprerience -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Previous Volunteer Experience</h5>
 
-                <!-- Previous vounteer exprerience -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Previous Volunteer Experience</h5>
-
-
+                <div class="card-panel">
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12" id="prevExperience">
                             <textarea id="volunteer-work" class="materialize-textarea"></textarea>
                             <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
                                 past.</label>
@@ -166,22 +167,46 @@
                         <div class="input-field col s12">
                             <p>
                                 <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="noExperience" />
                                     <span>I have no previous volunteer experience.</span>
                                 </label>
                             </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <!-- Volunteer Roles -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Volunteer Roles</h5>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12" id="rolePref">
+                            <textarea id="volunteer-role" class="materialize-textarea"></textarea>
+                            <label for="volunteer-work">Please detail volunteer roles that interest you. We want to
+                                ensure
+                                we
+                                utilize your skills.</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" id="noPref" />
+                                    <span>I have no preference.</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Volunteer Availability -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Volunteer Availability</h5>
 
-                <!-- Volunteer Availability -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Volunteer Availability</h5>
-
-
+                <div class="card-panel">
                     <label>Please select the choices that most fit your volunteer availability: </label>
 
                     <p>
@@ -215,42 +240,19 @@
                         </label>
                     </p>
                 </div>
-
-
-
-                <!-- Volunteer Roles -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Volunteer Roles</h5>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="volunteer-role" class="materialize-textarea"></textarea>
-                            <label for="volunteer-work">Please detail volunteer roles that interest you. We want to
-                                ensure
-                                we
-                                utilize your skills.</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <p>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>I have no preference.</span>
-                                </label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
 
 
 
-                <!-- References -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>References</h5>
 
 
+            <!-- References -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>References</h5>
+
+                <div class="card-panel">
                     <ul class="collapsible">
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
@@ -350,17 +352,17 @@
                             </div>
                         </li>
                     </ul>
-
                 </div>
+            </div>
 
 
 
-                <!-- How Did you Hear About us  -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>How did you hear about us</h5>
+            <!-- How Did you Hear About us  -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>How did you hear about us</h5>
 
-
+                <div class="card-panel">
                     <select class="input-field col s12" id="howdidyouhear">
                         <option value="none">Select One</option>
                         <option value="friend">Word of Mouth/Friend/Colleague</option>
@@ -371,14 +373,14 @@
                     </select>
                     <br>
                 </div>
+            </div>
 
+            <!-- Background Check Notice-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Consent to Background Check</h5>
 
-                <!-- Background Check Notice-->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Consent to Background Check</h5>
-
-
+                <div class="card-panel">
                     <p>Upon submission of this application I consent to a background check.</p>
                     <p>
                         <label>
@@ -393,54 +395,55 @@
                         </label>
                     </p>
                 </div>
+            </div>
 
-                <!-- Signature and date-->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Agreement</h5>
 
-                    <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
-                        I understand that if I am accepted as a volunteer, any false statements, omissions, or other
-                        misrepresentations made by me on this application may result in immediate dismissal.</p>
-                    <label for="signature">Signature</label>
-                    <input type="text" class="form-control" id="signature">
-                    <br>
+            <!-- Policy -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Policy</h5>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="card-panel">
+                            <h6>By submitting this application, I affirm that the facts set forth in it are
+                                true
+                                and
+                                complete.
+                                I understand that if I am accepted as a volunteer, any false statements, omissions, or
+                                other
+                                misrepresentations made by me on this application may result in immediate dismissal.
+                            </h6>
+                        </div>
 
-                    <label for="date">Date</label>
-                    <input name="date" type="text" class="datepicker" id="date">
+                        <div class="card-panel">
+                            <h6>It is the policy of this orginization to provide equal opportunities
+                                without
+                                regard to
+                                race, color, religion, national origin, gender, sexual preference, age, or disability.
+                            </h6>
+                        </div>
+                    </div>
                     <br>
                 </div>
+            </div>
+            <!-- Submit btn -->
+            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
 
-                <!-- Policy -->
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Policy</h5>
-
-                    <h6>It is the policy of this orginization to provide equal opportunities without regard to
-                        race, color, religion, national origin, gender, sexual preference, age, or disability.
-                    </h6>
-                    <br>
-                </div>
-
-                <!-- Submit btn -->
-                <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-            </form>
-        </div>
     </div>
     <!--container-->
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="./scripts/form.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./scripts/form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
