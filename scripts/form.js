@@ -56,3 +56,62 @@ $(function () {
 
     });
 });
+
+// function to display message if user selects no from the
+// consent radio buttons
+function func() {
+    var conN = document.getElementById("no").checked;
+    var con = document.getElementById("consent");
+    if(conN == true) {
+        con.style.display = "block";
+    } else {
+        con.style.display = "none";
+    }
+}
+
+
+// on submit the form checks validation on certain criteria
+document.getElementById("volunteer-form").onsubmit = validate;
+
+function validate() {
+
+    var Valid = true;
+
+    var errors = document.getElementsByClassName("err");
+    for(var i = 0; i < errors.length; i++) {
+        errors[i].style.visibility = "hidden";
+    }
+
+    // validates if a consent option was selected
+    var Y = document.getElementById("yes").checked;
+    var N = document.getElementById("no").checked;
+    if (Y == false && N == false) {
+        var errConsent = document.getElementById("err-consent");
+        errConsent.style.visibility = "visible";
+        Valid = false;
+    }
+
+    var address = document.getElementById("address").value;
+    if (address == "") {
+        var errAddress = document.getElementById("err-address");
+        errAddress.style.visibility = "visible";
+        Valid = false;
+    }
+
+    var city = document.getElementById("city").value;
+    if (city == "") {
+        var errCity = document.getElementById("err-city");
+        errCity.style.visibility = "visible";
+        Valid = false;
+    }
+
+    var zip = document.getElementById("zip").value;
+    if (zip == "") {
+        var errZip = document.getElementById("err-zip");
+        errZip.style.visibility = "visible";
+        Valid = false;
+    }
+
+    return Valid;
+}
+
