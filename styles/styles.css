@@ -32,8 +32,17 @@ fieldset {
     text-align: center;
 }
 .img {
-    float: right;
     display: inline-block;
+}
+
+#consent {
+    display: none;
+    color: red;
+}
+
+.err {
+    visibility: hidden;
+    color: red;
 }
 
 /* .header {
