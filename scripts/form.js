@@ -26,6 +26,18 @@ $("#noPref").click(function(){
   $("#rolePref").toggle();
 });
 
+/*Show or Hide other textarea function
+* for interests
+ */
+$("#other-interest").hide();
+$("#other-interests").change(function () {
+    if ($("#other-interests").is(":checked")) {
+        $("#other-interest").show();
+    }
+    else {
+        $("#other-interest").hide();
+    }
+});
 
 
 /*Show or Hide other textarea function
