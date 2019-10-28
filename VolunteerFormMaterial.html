@@ -71,7 +71,7 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_phone</i>
                             <label for="phone">Phone #</label>
-                            <input type="number" id="phone">
+                            <input type="tel" id="phone">
                         </div>
                     </div>
 
@@ -97,37 +97,48 @@
             <div class="section">
                 <h5>Interests</h5>
 
-                <div class="card-panel">
+                <div class="card-panel" id="interests">
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="event"/>
                             <span>Events</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="fundraiser"/>
                             <span>Fundraising</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="newsletter"/>
                             <span>Newsletter</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="volunteer-coordination"/>
                             <span>Volunteer Coordination</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="mentoring"/>
                             <span>Mentoring</span>
                         </label>
                     </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="other-interests"/>
+                            <span>Other</span>
+                        </label>
+                    </p>
+                    <div class="input-field col s12" id="other-interest">
+                        <textarea id="other1" class="materialize-textarea"></textarea>
+                        <label for="other1">Other</label>
+                    </div><!--div-->
+
                 </div>
             </div>
 
@@ -372,7 +383,14 @@
                         <option value="other">Other</option>
                     </select>
                     <br>
+                    <br>
+                    <!--textarea for when other option is selected-->
+                    <div class="input-field col s12" id="other-block">
+                        <textarea id="other2" class="materialize-textarea"></textarea>
+                        <label for="other2">Other</label>
+                    </div><!--div-->
                 </div>
+
             </div>
 
             <!-- Background Check Notice-->
