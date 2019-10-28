@@ -25,3 +25,22 @@ $("#noExperience").click(function(){
 $("#noPref").click(function(){
   $("#rolePref").toggle();
 });
+
+
+
+/*Show or Hide other textarea function
+* for how did you hear about us
+ */
+$(function () {
+    $("#other-block").hide();
+    $("#howdidyouhear").change(function () {
+        var heardAbout = $(this).val();
+        if(heardAbout === "other") {
+            $("#other-block").show();
+        }
+        else {
+            $("#other-block").hide();
+        }
+
+    });
+});
