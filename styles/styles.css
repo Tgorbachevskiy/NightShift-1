@@ -112,6 +112,9 @@ fieldset {
     visibility: hidden;
     color: red;
 }
+#availability {
+    display: none;
+}
 
 /* .header {
     font-family: Trattatello, fantasy;
