@@ -75,6 +75,36 @@ function time() {
   }
 }
 
+/*Show or Hide other textarea function
+* for how did you hear about us
+ */
+$(function () {
+    $("#other-block").hide();
+    $("#howdidyouhear").change(function () {
+        var heardAbout = $(this).val();
+        if(heardAbout === "other") {
+            $("#other-block").show();
+        }
+        else {
+            $("#other-block").hide();
+        }
+
+    });
+});
+
+/*Show or Hide other textarea function
+* for interests
+ */
+$("#other-interest").hide();
+$("#other-interests").change(function () {
+    if ($("#other-interests").is(":checked")) {
+        $("#other-interest").show();
+    }
+    else {
+        $("#other-interest").hide();
+    }
+});
+
 
 // on submit the form checks validation on certain criteria
 document.getElementById("volunteer-form").onsubmit = validate;
