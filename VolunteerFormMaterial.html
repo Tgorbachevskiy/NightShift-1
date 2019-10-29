@@ -313,16 +313,24 @@
                 <label>Please select the choices that most fit your volunteer availability: </label>
                 <p>
                     <label>
-                        <input type="checkbox" />
+                        <input type="checkbox" onclick="time();" id="weekends" />
                         <span>Weekends</span>
                     </label>
                 </p>
+                <label id="availability" class="hours">
+                Select available hours:<br>
+                    <span>
+                        From: <input type="time"/>
+                        To: <input type="time"/>
+                    </span>
+                </label>
                 <p>
                     <label>
                         <input type="checkbox" />
                         <span>1 Week Summer Camp</span>
                     </label>
                 </p>
+            </div>
 
             </div>
         </div>
