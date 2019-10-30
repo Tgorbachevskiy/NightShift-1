@@ -182,85 +182,87 @@
                         </div>
                     </div>
                 </div><!-- Card Panel close-->
-            </div><!-- Contact info close-->         
+
+            </div><!-- Contact info close-->
 
 
-        <!--If applicant would like to be added to mailing list-->
-        <div class="divider"></div>
-        <div class="section">
-            <div class="card-panel">
-                <div class="row">
-                    <div class="input-field col s12" id="email-list">
-                        <label>Would you like to be added to our mailing list</label>
-                        <br>
-                            <div class="input-field col s12">
-                                <form action="#">
-                                    <p>
-                                        <label>
-                                            <input  class="with-gap" name="mail-list" type="radio" checked/>
-                                            <span>Yes</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input class="with-gap" name="mail-list" type="radio" />
-                                            <span>No</span>
-                                        </label>
-                                    </p>
-                                </form>
-                            </div>
+            <!--If applicant would like to be added to mailing list-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Mailing List</h5>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12" id="email-list">
+                            <p>Would you like to be added to our mailing list</p>
+
+
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="mail-list" type="radio"/>
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="mail-list" type="radio" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Interests -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Interests</h5>
+            <!-- Interests -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Interests</h5>
 
-            <div class="card-panel" id="interests">
-                <p>
-                    <label>
-                        <input type="checkbox" id="event"/>
-                        <span>Events</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="fundraiser"/>
-                        <span>Fundraising</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="newsletter"/>
-                        <span>Newsletter</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="volunteer-coordination"/>
-                        <span>Volunteer Coordination</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="mentoring"/>
-                        <span>Mentoring</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="other-interests"/>
-                        <span>Other</span>
-                    </label>
-                </p>
-                <div class="input-field col s12" id="other-interest">
-                    <textarea id="other1" class="materialize-textarea"></textarea>
-                    <label for="other1">Other</label>
-                </div><!--div-->                   
+                <div class="card-panel" id="interests">
+                    <p>
+                        <label>
+                            <input type="checkbox" id="event" />
+                            <span>Events</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="fundraiser" />
+                            <span>Fundraising</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="newsletter" />
+                            <span>Newsletter</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="volunteer-coordination" />
+                            <span>Volunteer Coordination</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="mentoring" />
+                            <span>Mentoring</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="other-interests" />
+                            <span>Other</span>
+                        </label>
+                    </p>
+                    <div class="input-field col s12" id="other-interest">
+                        <textarea id="other1" class="materialize-textarea"></textarea>
+                        <label for="other1">Other</label>
+                    </div>
+                    <!--div-->
+                </div>
             </div>
-        </div>
 
             <!-- Special Skills/Qualifications -->
             <div class="divider"></div>
@@ -365,207 +367,212 @@
             </div>
 
 
-    <!-- References -->
-    <div class="divider"></div>
-    <div class="section">
-        <h5>References</h5>
+            <!-- References -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>References</h5>
 
-        <div class="card-panel">
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
-                    <div class="collapsible-body">
-                        <!-- First Reference -->
-                        <div class="input-field">
-                            <label for="refFirstName1">Reference First Name</label>
-                            <input type="text" class="form-control" id="refFirstName1" name="refFirstName1">
-                        </div>
-
-                        <div class="input-field">
-                            <label for="refLastName1">Reference Last Name</label>
-                            <input type="text" class="form-control" id="refLastName1" name="refLastName1">
-                        </div>
-
-
-                            <div class="input-field">
-                                <label for="refPhone1">Phone #</label>
-                                <input type="tel" class="form-control" id="refPhone1" name="refPhone1">
-                            </div>
-
-                        <div class="input-field">
-                            <label for="refEmail1">E-mail</label>
-                            <input type="text" class="form-control" id="refEmail1" name="refEmail1">
-                        </div>
-
-                        <div class="input-field">
-
-                            <label for="refRelation1">Relation</label>
-                            <input type="text" class="form-control" id="refRelation1" name="refRelation1">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
-                    <div class="collapsible-body">
-                        <!-- Second Reference -->
-                        <div class="input-field">
-                            <label for="refFirstName2">Reference First Name</label>
-                            <input type="text" class="form-control" id="refFirstName2" name="refFirstName2">
-                        </div>
-
-                        <div class="input-field">
-                            <label for="refLastName2">Reference Last Name</label>
-                            <input type="text" class="form-control" id="refLastName2" name="refLastName2">
-                        </div>
-
-                        <div class="input-field">
-                            <label for="refPhone2">Phone #</label>
-                            <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
-                        </div>
-
-                        <div class="input-field">
-                            <label for="refEmail2">E-mail</label>
-                            <input type="text" class="form-control" id="refEmail2" name="refEmail2">
-                        </div>
-
-                        <div class="input-field">
-
-                            <label for="refRelation2">Relation</label>
-                            <input type="text" class="form-control" id="refRelation2" name="refRelation2">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
-                    <div class="collapsible-body"><span>
-                            <!-- Third Reference -->
-
-                            <div class="input-field">
-                                <label for="refFirstName3">Reference First Name</label>
-                                <input type="text" class="form-control" id="refFirstName3" name="refFirstName3">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refLastName3">Reference Last Name</label>
-                                <input type="text" class="form-control" id="refLastName3" name="refLastName3">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refPhone3">Phone #</label>
-                                <input type="tel" class="form-control" id="refPhone3" name="refPhone2">
-
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refEmail3">E-mail</label>
-                                <input type="text" class="form-control" id="refEmail3" name="refEmail3">
-                            </div>
-
-                            <div class="input-field">
-
-                                <label for="refRelation3">Relation</label>
-                                <input type="text" class="form-control" id="refRelation3" name="refRelation3">
-                            </div>
-                        </span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
-    <!-- How Did you Hear About us  -->
-    <div class="divider"></div>
-    <div class="section">
-        <h5>How did you hear about us</h5>
-
-        <div class="card-panel">
-            <select class="input-field col s12" id="howdidyouhear">
-                <option value="none" disabled selected>Select One</option>
-                <option value="friend">Word of Mouth/Friend/Colleague</option>
-                <option value="web">Web/Social Media</option>
-                <option value="print">Poster/Flyer</option>
-                <option value="sponsor">Corporate Sponsor</option>
-                <option value="other">Other</option>
-            </select>
-            <br>
-            <br>
-            <!--textarea for when other option is selected-->
-            <div class="input-field col s12" id="other-block">
-                <textarea id="other2" class="materialize-textarea"></textarea>
-                <label for="other2">Other</label>
-            </div>
-            <!--div-->
-        </div>
-
-    </div>
-
-    <!-- Background Check Notice-->
-    <div class="divider"></div>
-    <div class="section">
-        <h5>Consent to Background Check</h5>
-
-        <div class="card-panel">
-            <p>Upon submission of this application I consent to a background check.</p>
-            <p>
-                <label>
-                    <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="yes" />
-                    <span>Yes</span>
-                    <label class="form-check-label" for="yes"></label>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="no" />
-                    <span>No</span>
-                    <label class="form-check-label" for="no"></label>
-                </label>
-            </p>
-            <div>
-                <label id="consent" class="hidden">
-                    <p>*Because of our values as an organization and out of the safety of the youth
-                        we serve, it is a requirement that a background check must be submitted. You have
-                        chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
-                        at this time we are unable to move forward with your submission. Please do visit us
-                        again!</p>
-                </label>
-            </div>
-            <span class="err" id="err-consent">
-                Please choose a consent option.
-            </span>
-        </div>
-    </div>
-
-
-    <!-- Policy -->
-    <div class="divider"></div>
-    <div class="section">
-        <h5>Policy</h5>
-        <div class="card-panel">
-            <div class="row">
                 <div class="card-panel">
-                    <h6>By submitting this application, I affirm that the facts set forth in it are true and
-                        complete. I understand that if I am accepted as a volunteer, any false statements,
-                        omissions, or other misrepresentations made by me on this
-                        application may result in immediate dismissal.
-                    </h6>
-                </div>
-                <div class="card-panel">
-                    <h6>It is the policy of this organization to provide equal opportunities without regard to
-                        race, color, religion, national origin, gender, sexual preference, age, or disability.
-                    </h6>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
+                            <div class="collapsible-body">
+                                <!-- First Reference -->
+                                <div class="input-field">
+                                    <label for="refFirstName1">Reference First Name</label>
+                                    <input type="text" class="form-control" id="refFirstName1" name="refFirstName1">
+                                </div>
+
+                                <div class="input-field">
+                                    <label for="refLastName1">Reference Last Name</label>
+                                    <input type="text" class="form-control" id="refLastName1" name="refLastName1">
+                                </div>
+
+
+                                <div class="input-field">
+                                    <label for="refPhone1">Phone #</label>
+                                    <input type="tel" class="form-control" id="refPhone1" name="refPhone1">
+                                </div>
+
+                                <div class="input-field">
+                                    <label for="refEmail1">E-mail</label>
+                                    <input type="text" class="form-control" id="refEmail1" name="refEmail1">
+                                </div>
+
+                                <div class="input-field">
+
+                                    <label for="refRelation1">Relation</label>
+                                    <input type="text" class="form-control" id="refRelation1" name="refRelation1">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
+                            <div class="collapsible-body">
+                                <!-- Second Reference -->
+                                <div class="input-field">
+                                    <label for="refFirstName2">Reference First Name</label>
+                                    <input type="text" class="form-control" id="refFirstName2" name="refFirstName2">
+                                </div>
+
+                                <div class="input-field">
+                                    <label for="refLastName2">Reference Last Name</label>
+                                    <input type="text" class="form-control" id="refLastName2" name="refLastName2">
+                                </div>
+
+                                <div class="input-field">
+                                    <label for="refPhone2">Phone #</label>
+                                    <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
+                                </div>
+
+                                <div class="input-field">
+                                    <label for="refEmail2">E-mail</label>
+                                    <input type="text" class="form-control" id="refEmail2" name="refEmail2">
+                                </div>
+
+                                <div class="input-field">
+
+                                    <label for="refRelation2">Relation</label>
+                                    <input type="text" class="form-control" id="refRelation2" name="refRelation2">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
+                            <div class="collapsible-body"><span>
+                                    <!-- Third Reference -->
+
+                                    <div class="input-field">
+                                        <label for="refFirstName3">Reference First Name</label>
+                                        <input type="text" class="form-control" id="refFirstName3" name="refFirstName3">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="refLastName3">Reference Last Name</label>
+                                        <input type="text" class="form-control" id="refLastName3" name="refLastName3">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="refPhone2">Phone #</label>
+                                        <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
+
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="refEmail3">E-mail</label>
+                                        <input type="text" class="form-control" id="refEmail3" name="refEmail3">
+                                    </div>
+
+                                    <div class="input-field">
+
+                                        <label for="refRelation3">Relation</label>
+                                        <input type="text" class="form-control" id="refRelation3" name="refRelation3">
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <br>
-        </div>
-    </div>
-    
-    <!-- Submit btn -->
-    <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-    </button>
-    </form>
+
+
+
+
+            <!-- How Did you Hear About us  -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>How did you hear about us</h5>
+
+                <div class="card-panel">
+                    <select class="input-field col s12" id="howdidyouhear">
+                        <option value="none" disabled selected>Select One</option>
+                        <option value="friend">Word of Mouth/Friend/Colleague</option>
+                        <option value="web">Web/Social Media</option>
+                        <option value="print">Poster/Flyer</option>
+                        <option value="sponsor">Corporate Sponsor</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!--textarea for when other option is selected-->
+                    <div class="input-field col s12" id="other-block">
+                        <textarea id="other2" class="materialize-textarea"></textarea>
+                        <label for="other2">Other</label>
+                    </div>
+                    <!--div-->
+                </div>
+
+            </div>
+
+            <!-- Background Check Notice-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Consent to Background Check</h5>
+
+                <div class="card-panel">
+                    <p>Upon submission of this application I consent to a background check.</p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
+                                id="yes" />
+                            <span>Yes</span>
+                            <label class="form-check-label" for="yes"></label>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
+                                id="no" />
+                            <span>No</span>
+                            <label class="form-check-label" for="no"></label>
+                        </label>
+                    </p>
+                    <div>
+                        <label id="consent" class="hidden">
+                            <p>*Because of our values as an organization and out of the safety of the youth
+                                we serve, it is a requirement that a background check must be submitted. You have
+                                chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
+                                at this time we are unable to move forward with your submission. Please do visit us
+                                again!</p>
+                        </label>
+                    </div>
+                    <span class="err" id="err-consent">
+                        Please choose a consent option.
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- Policy -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Policy</h5>
+                <div class="card-panel">
+
+                    <div class="row">
+                        <div class="card-panel">
+                            <h6>By submitting this application, I affirm that the facts set forth in it are true and
+                                complete. I understand that if I am accepted as a volunteer, any false statements,
+                                omissions, or other misrepresentations made by me on this
+                                application may result in immediate dismissal.
+                            </h6>
+                        </div>
+                        <div class="card-panel">
+                            <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                                race, color, religion, national origin, gender, sexual preference, age, or disability.
+                            </h6>
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+
+            <!-- Submit btn -->
+            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
 
     </div>
     <!--container-->
