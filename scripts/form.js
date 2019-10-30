@@ -193,6 +193,8 @@ function youthValidate() {
 
     return Valid;
   }
+document.getElementById("youth-volunteer-form").onsubmit = youthValidate;
+
 /*Show or Hide other textarea function
 * for interests
  */
