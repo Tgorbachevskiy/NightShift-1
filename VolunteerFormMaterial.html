@@ -76,7 +76,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">place</i>
-                            <textarea id="address" class="materialize-textarea"></textarea>
+                            <input id="address" type="text" class="validate"></input>
                             <label for="address">Address</label>
                             <span class="err" id="err-address">
                                 Please enter your address.
@@ -88,7 +88,7 @@
                     <div class="row">
                         <div class="input-field col s4">
                             <i class="material-icons prefix">location_city</i>
-                            <textarea id="city" class="materialize-textarea"></textarea>
+                            <input id="city" type="text" class="validate"></input>
                             <label for="city">City</label>
                             <span class="err" id="err-city">
                                 Please enter your city.
@@ -151,8 +151,8 @@
                         </div>
 
                         <div class="input-field col s4">
-                            
-                            <textarea id="zip" class="materialize-textarea"></textarea>
+
+                            <input id="zip" type="text" pattern="[0-9]*" class="validate"></input>
                             <label for="zip">Zip Code</label>
                             <span class="err" id="err-zip">
                                 Please enter your zip code.
@@ -335,7 +335,7 @@
                 </div>
 
             </div>
-    </div>
+    
 
     <!-- References -->
     <div class="divider"></div>
@@ -532,6 +532,7 @@
             <br>
         </div>
     </div>
+    
     <!-- Submit btn -->
     <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
