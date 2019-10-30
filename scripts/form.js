@@ -36,6 +36,7 @@ $("#noPref").click(function(){
   $("#rolePref").toggle();
 });
 
+
 /*Show or Hide other textarea function
 * for interests
  */
@@ -48,6 +49,32 @@ $("#other-interests").change(function () {
         $("#other-interest").hide();
     }
 });
+
+
+
+
+
+// function to display message if user selects no from the
+// consent radio buttons
+function func() {
+  var conN = document.getElementById("no").checked;
+  var con = document.getElementById("consent");
+  if(conN == true) {
+    con.style.display = "block";
+  } else {
+    con.style.display = "none";
+  }
+}
+
+// toggles the hours that pop up for availability if weekend is selected
+function time() {
+  var chb = document.getElementById("weekends");
+  if(chb.checked) {
+    document.getElementById("availability").style.display = "block";
+  } else {
+    document.getElementById("availability").style.display = "none";
+  }
+}
 
 
 /*Show or Hide other textarea function
@@ -66,6 +93,7 @@ $(function () {
 
     });
 });
+
 
 
 /*
@@ -164,4 +192,51 @@ function validate() {
     }
 
     return Valid;
+
+/*Show or Hide other textarea function
+* for interests
+ */
+$("#other-interest").hide();
+$("#other-interests").change(function () {
+    if ($("#other-interests").is(":checked")) {
+        $("#other-interest").show();
+    }
+    else {
+        $("#other-interest").hide();
+    }
+});
+
+
+// on submit the form checks validation on certain criteria
+document.getElementById("volunteer-form").onsubmit = validate;
+
+function validate() {
+
+  var Valid = tru
+  // validates that the address is not blank
+  var address = document.getElementById("address").value;
+  if (address == "") {
+    var errAddress = document.getElementById("err-address");
+    errAddress.style.visibility = "visible";
+    Valid = false;
+  }
+
+  // validates that the city is not blank
+  var city = document.getElementById("city").value;
+  if (city == "") {
+    var errCity = document.getElementById("err-city");
+    errCity.style.visibility = "visible";
+    Valid = false;
+  }
+
+  // validates that the zip code is not blank
+  var zip = document.getElementById("zip").value;
+  if (zip == "") {
+    var errZip = document.getElementById("err-zip");
+    errZip.style.visibility = "visible";
+    Valid = false;
+  }
+
+  return Valid;
+
 }

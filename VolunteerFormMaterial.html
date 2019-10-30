@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest_title">
 
     <title>Volunteer Sign-up</title>
 </head>
@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <h1 class="header col s6">Volunteer Sign-up</h1>
-            <img class="img col offset-s4 s2" src="images/idaydream.png" alt="logo">
+            <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
         </div>
 
         <div class="row">
@@ -40,7 +40,9 @@
             </div>
         </div>
 
-        <form class="col s12" id="volunteer-form">
+
+        <form class="col s12" action="confirmation.html" method="post" id="volunteer-form">
+
 
             <!-- Contact Info -->
             <div class="divider"></div>
@@ -54,11 +56,11 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate">
+                            <input id="first_name" type="text" class="validate" required>
                             <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate">
+                            <input id="last_name" type="text" class="validate" required>
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
@@ -66,29 +68,32 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_mail</i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" required>
                             <label for="email">Email</label>
                         </div>
                     </div>
 
-
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">place</i>
-                            <textarea id="address" class="materialize-textarea"></textarea>
+                            <input id="address" type="text" class="validate"></input>
                             <label for="address">Address</label>
+                            <span class="err" id="err-address">
+                                Please enter your address.
+                            </span>
                         </div>
                     </div>
 
-                   <div class="row">
+                    <div class="row">
                         <div class="input-field col s4">
                             <i class="material-icons prefix">location_city</i>
-                            <textarea id="city" class="materialize-textarea"></textarea>
+                            <input id="city" type="text" class="validate"></input>
                             <label for="city">City</label>
+                            <span class="err" id="err-city">
+                                Please enter your city.
+                            </span>
                         </div>
-
                         <div class="input-field col s4">
-<!--                            <i class="material-icons prefix">public</i>-->
                             <select id="state">
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
@@ -145,20 +150,23 @@
                         </div>
 
                         <div class="input-field col s4">
-<!--                            <i class="material-icons prefix">gps_fixed</i>-->
-                            <textarea id="zip" class="materialize-textarea"></textarea>
+
+                            <input id="zip" type="text" pattern="[0-9]*" class="validate"></input>
                             <label for="zip">Zip Code</label>
+                            <span class="err" id="err-zip">
+                                Please enter your zip code.
+                            </span>
                         </div>
+
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_phone</i>
                             <label for="phone">Phone #</label>
-                            <input type="number" id="phone">
+                            <input type="tel" id="phone">
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="input-field col s12">
@@ -173,48 +181,88 @@
                             </select>
                         </div>
                     </div>
+                </div><!-- Card Panel close-->
+
+            </div><!-- Contact info close-->
+
+
+            <!--If applicant would like to be added to mailing list-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Mailing List</h5>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12" id="email-list">
+                            <p>Would you like to be added to our mailing list</p>
+
+
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="mail-list" type="radio" checked/>
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="mail-list" type="radio" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <!-- Interests -->
             <div class="divider"></div>
             <div class="section">
                 <h5>Interests</h5>
 
-                <div class="card-panel">
+                <div class="card-panel" id="interests">
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="event" />
                             <span>Events</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="fundraiser" />
                             <span>Fundraising</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="newsletter" />
                             <span>Newsletter</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="volunteer-coordination" />
                             <span>Volunteer Coordination</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="mentoring" />
                             <span>Mentoring</span>
                         </label>
                     </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="other-interests" />
+                            <span>Other</span>
+                        </label>
+                    </p>
+                    <div class="input-field col s12" id="other-interest">
+                        <textarea id="other1" class="materialize-textarea"></textarea>
+                        <label for="other1">Other</label>
+                    </div>
+                    <!--div-->
                 </div>
             </div>
-
 
             <!-- Special Skills/Qualifications -->
             <div class="divider"></div>
@@ -225,7 +273,8 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea id="hobbies" class="materialize-textarea"></textarea>
-                            <label for="hobbies">Summarize special skills and qualifications from employment, previous
+                            <label for="hobbies">Summarize special skills and qualifications from employment,
+                                previous
                                 volunteer
                                 work, or other
                                 activities
@@ -245,7 +294,8 @@
                     <div class="row">
                         <div class="input-field col s12" id="prevExperience">
                             <textarea id="volunteer-work" class="materialize-textarea"></textarea>
-                            <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
+                            <label for="volunteer-work">Summarize any previous volunteer work you might have done in
+                                the
                                 past.</label>
                         </div>
                         <div class="input-field col s12">
@@ -292,43 +342,29 @@
 
                 <div class="card-panel">
                     <label>Please select the choices that most fit your volunteer availability: </label>
-
                     <p>
                         <label>
-                            <input type="checkbox" />
-                            <span>Weekend Workshop (4-hr shift)</span>
+                            <input type="checkbox" onclick="time();" id="weekends" />
+                            <span>Weekends</span>
                         </label>
                     </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>Weekend Workshop (8-hr shift)</span>
-                        </label>
-                    </p>
+                    <label id="availability" class="hours">
+                        Select available hours:<br>
+                        <span>
+                            From: <input type="time" />
+                            To: <input type="time" />
+                        </span>
+                    </label>
                     <p>
                         <label>
                             <input type="checkbox" />
                             <span>1 Week Summer Camp</span>
                         </label>
                     </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>Weekday Workshop</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>Ongoing Weekday Commitment</span>
-                        </label>
-                    </p>
                 </div>
+
+
             </div>
-
-
-
-
 
 
             <!-- References -->
@@ -352,9 +388,10 @@
                                     <input type="text" class="form-control" id="refLastName1" name="refLastName1">
                                 </div>
 
+
                                 <div class="input-field">
                                     <label for="refPhone1">Phone #</label>
-                                    <input type="number" class="form-control" id="refPhone1" name="refPhone1">
+                                    <input type="tel" class="form-control" id="refPhone1" name="refPhone1">
                                 </div>
 
                                 <div class="input-field">
@@ -385,7 +422,7 @@
 
                                 <div class="input-field">
                                     <label for="refPhone2">Phone #</label>
-                                    <input type="number" class="form-control" id="refPhone2" name="refPhone2">
+                                    <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
                                 </div>
 
                                 <div class="input-field">
@@ -416,8 +453,9 @@
                                     </div>
 
                                     <div class="input-field">
-                                        <label for="refPhone3">Phone #</label>
-                                        <input type="number" class="form-control" id="refPhone3" name="refPhone3">
+                                        <label for="refPhone2">Phone #</label>
+                                        <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
+
                                     </div>
 
                                     <div class="input-field">
@@ -430,14 +468,13 @@
                                         <label for="refRelation3">Relation</label>
                                         <input type="text" class="form-control" id="refRelation3" name="refRelation3">
                                     </div>
-
-
                                 </span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+
 
 
 
@@ -456,7 +493,15 @@
                         <option value="other">Other</option>
                     </select>
                     <br>
+                    <br>
+                    <!--textarea for when other option is selected-->
+                    <div class="input-field col s12" id="other-block">
+                        <textarea id="other2" class="materialize-textarea"></textarea>
+                        <label for="other2">Other</label>
+                    </div>
+                    <!--div-->
                 </div>
+
             </div>
 
             <!-- Background Check Notice-->
@@ -468,16 +513,32 @@
                     <p>Upon submission of this application I consent to a background check.</p>
                     <p>
                         <label>
-                            <input class="with-gap" name="group1" type="radio" />
+                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
+                                id="yes" />
                             <span>Yes</span>
+                            <label class="form-check-label" for="yes"></label>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input class="with-gap" name="group1" type="radio" checked />
+                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
+                                id="no" />
                             <span>No</span>
+                            <label class="form-check-label" for="no"></label>
                         </label>
                     </p>
+                    <div>
+                        <label id="consent" class="hidden">
+                            <p>*Because of our values as an organization and out of the safety of the youth
+                                we serve, it is a requirement that a background check must be submitted. You have
+                                chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
+                                at this time we are unable to move forward with your submission. Please do visit us
+                                again!</p>
+                        </label>
+                    </div>
+                    <span class="err" id="err-consent">
+                        Please choose a consent option.
+                    </span>
                 </div>
             </div>
 
@@ -487,25 +548,29 @@
             <div class="section">
                 <h5>Policy</h5>
                 <div class="card-panel">
+
                     <div class="row">
                         <div class="card-panel">
-                            <h6>By submitting this application, I affirm that the facts set forth in it are
-                                true and complete. I understand that if I am accepted as a volunteer, any
-                                false statements, omissions, or other misrepresentations made by me on this
+
+                            <h6>By submitting this application, I affirm that the facts set forth in it are true and
+                                complete. I understand that if I am accepted as a volunteer, any false statements,
+                                omissions, or other misrepresentations made by me on this
                                 application may result in immediate dismissal.
                             </h6>
                         </div>
-
                         <div class="card-panel">
-                            <h6>It is the policy of this organization to provide equal opportunities without
-                                regard to race, color, religion, national origin, gender, sexual preference,
-                                age, or disability.
+
+                            <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                                race, color, religion, national origin, gender, sexual preference, age, or disability.
+
                             </h6>
                         </div>
                     </div>
                     <br>
+
                 </div>
             </div>
+
             <!-- Submit btn -->
             <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
@@ -652,7 +717,6 @@
         </form>
     </div>
     <!--container-->
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
