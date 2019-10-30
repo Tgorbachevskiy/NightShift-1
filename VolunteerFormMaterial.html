@@ -20,527 +20,535 @@
 
 <body class="blue-grey lighten-5">
 
-<!--main container-->
-<div class="container">
-    <div class="row">
-        <h1 class="header col s6">Volunteer Sign-up</h1>
-        <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
-    </div>
-
-    <div class="row">
-        <div class="input-field col s6">
-            <i class="material-icons prefix">person</i>
-            <select id="person">
-                <option value="default">Who's filling out this form?</option>
-                <option value="student">Student</option>
-                <option value="parent">Parent</option>
-                <option value="other">Other</option>
-            </select>
-            <label for="person">Select one</label>
-        </div>
-    </div>
-
-    <form class="col s12" id="volunteer-form">
-
-        <!-- Contact Info -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Contact Info</h5>
-
-            <div class="card-panel">
-
-
-
-               <div class="row">
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="first_name" type="text" class="validate" required>
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" required>
-                        <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">contact_mail</i>
-                        <input id="email" type="email" class="validate" required>
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">place</i>
-                        <textarea id="address" class="materialize-textarea"></textarea>
-                        <label for="address">Address</label>
-                        <span class="err" id="err-address">
-                            Please enter your address.
-                        </span>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="input-field col s4">
-                        <i class="material-icons prefix">location_city</i>
-                        <textarea id="city" class="materialize-textarea"></textarea>
-                        <label for="city">City</label>
-                        <span class="err" id="err-city">
-                            Please enter your city.
-                        </span>
-
-                    <div class="input-field col s4">
-                        <!--                            <i class="material-icons prefix">public</i>-->
-                        <select id="state">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="CE">Delaware</option>
-                            <option value="DC">District of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="MV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA" selected="selected">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
-                    </div>
-
-                    <div class="input-field col s4">
-                        <!--                            <i class="material-icons prefix">gps_fixed</i>-->
-                        <textarea id="zip" class="materialize-textarea"></textarea>
-                        <label for="zip">Zip Code</label>
-                        <span class="err" id="err-zip">
-                            Please enter your zip code.
-                        </span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">contact_phone</i>
-                        <label for="phone">Phone #</label>
-                        <input type="tel" id="phone">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">accessibility</i>
-                        <select id="size">
-                            <option value="" disabled selected>Select a T-shirt Size</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                            <option value="xlarge">X-Large</option>
-                            <option value="xxlarge">XX-Large</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+    <!--main container-->
+    <div class="container">
+        <div class="row">
+            <h1 class="header col s6">Volunteer Sign-up</h1>
+            <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
         </div>
 
-        <!-- Interests -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Interests</h5>
-
-            <div class="card-panel" id="interests">
-                <p>
-                    <label>
-                        <input type="checkbox" id="event"/>
-                        <span>Events</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="fundraiser"/>
-                        <span>Fundraising</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="newsletter"/>
-                        <span>Newsletter</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="volunteer-coordination"/>
-                        <span>Volunteer Coordination</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="mentoring"/>
-                        <span>Mentoring</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" id="other-interests"/>
-                        <span>Other</span>
-                    </label>
-                </p>
-                <div class="input-field col s12" id="other-interest">
-                    <textarea id="other1" class="materialize-textarea"></textarea>
-                    <label for="other1">Other</label>
-                </div><!--div-->
-
-            </div>
-        </div>
-
-        <!-- Special Skills/Qualifications -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Special Skills/Qualifications</h5>
-
-            <div class="card-panel">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="hobbies" class="materialize-textarea"></textarea>
-                        <label for="hobbies">Summarize special skills and qualifications from employment, previous
-                            volunteer
-                            work, or other
-                            activities
-                            including sports and hobbies.</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Previous vounteer exprerience -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Previous Volunteer Experience</h5>
-
-            <div class="card-panel">
-                <div class="row">
-                    <div class="input-field col s12" id="prevExperience">
-                        <textarea id="volunteer-work" class="materialize-textarea"></textarea>
-                        <label for="volunteer-work">Summarize any previous volunteer work you might have done in the
-                            past.</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <p>
-                            <label>
-                                <input type="checkbox" id="noExperience" />
-                                <span>I have no previous volunteer experience.</span>
-                            </label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Volunteer Roles -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Volunteer Roles</h5>
-            <div class="card-panel">
-                <div class="row">
-                    <div class="input-field col s12" id="rolePref">
-                        <textarea id="volunteer-role" class="materialize-textarea"></textarea>
-                        <label for="volunteer-work">Please detail volunteer roles that interest you. We want to
-                            ensure
-                            we
-                            utilize your skills.</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <p>
-                            <label>
-                                <input type="checkbox" id="noPref" />
-                                <span>I have no preference.</span>
-                            </label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Volunteer Availability -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Volunteer Availability</h5>
-
-            <div class="card-panel">
-                <label>Please select the choices that most fit your volunteer availability: </label>
-                <p>
-                    <label>
-                        <input type="checkbox" onclick="time();" id="weekends" />
-                        <span>Weekends</span>
-                    </label>
-                </p>
-                <label id="availability" class="hours">
-                Select available hours:<br>
-                    <span>
-                        From: <input type="time"/>
-                        To: <input type="time"/>
-                    </span>
-                </label>
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>1 Week Summer Camp</span>
-                    </label>
-                </p>
-            </div>
-
-            </div>
-        </div>
-
-        <!-- References -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>References</h5>
-
-            <div class="card-panel">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
-                        <div class="collapsible-body">
-                            <!-- First Reference -->
-                            <div class="input-field">
-                                <label for="refFirstName1">Reference First Name</label>
-                                <input type="text" class="form-control" id="refFirstName1" name="refFirstName1">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refLastName1">Reference Last Name</label>
-                                <input type="text" class="form-control" id="refLastName1" name="refLastName1">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refPhone1">Phone #</label>
-                                <input type="number" class="form-control" id="refPhone1" name="refPhone1">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refEmail1">E-mail</label>
-                                <input type="text" class="form-control" id="refEmail1" name="refEmail1">
-                            </div>
-
-                            <div class="input-field">
-
-                                <label for="refRelation1">Relation</label>
-                                <input type="text" class="form-control" id="refRelation1" name="refRelation1">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
-                        <div class="collapsible-body">
-                            <!-- Second Reference -->
-                            <div class="input-field">
-                                <label for="refFirstName2">Reference First Name</label>
-                                <input type="text" class="form-control" id="refFirstName2" name="refFirstName2">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refLastName2">Reference Last Name</label>
-                                <input type="text" class="form-control" id="refLastName2" name="refLastName2">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refPhone2">Phone #</label>
-                                <input type="number" class="form-control" id="refPhone2" name="refPhone2">
-                            </div>
-
-                            <div class="input-field">
-                                <label for="refEmail2">E-mail</label>
-                                <input type="text" class="form-control" id="refEmail2" name="refEmail2">
-                            </div>
-
-                            <div class="input-field">
-
-                                <label for="refRelation2">Relation</label>
-                                <input type="text" class="form-control" id="refRelation2" name="refRelation2">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
-                        <div class="collapsible-body"><span>
-                                    <!-- Third Reference -->
-
-                                    <div class="input-field">
-                                        <label for="refFirstName3">Reference First Name</label>
-                                        <input type="text" class="form-control" id="refFirstName3" name="refFirstName3">
-                                    </div>
-
-                                    <div class="input-field">
-                                        <label for="refLastName3">Reference Last Name</label>
-                                        <input type="text" class="form-control" id="refLastName3" name="refLastName3">
-                                    </div>
-
-                                    <div class="input-field">
-                                        <label for="refPhone3">Phone #</label>
-                                        <input type="number" class="form-control" id="refPhone3" name="refPhone3">
-                                    </div>
-
-                                    <div class="input-field">
-                                        <label for="refEmail3">E-mail</label>
-                                        <input type="text" class="form-control" id="refEmail3" name="refEmail3">
-                                    </div>
-
-                                    <div class="input-field">
-
-                                        <label for="refRelation3">Relation</label>
-                                        <input type="text" class="form-control" id="refRelation3" name="refRelation3">
-                                    </div>
-
-
-                                </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-
-        <!-- How Did you Hear About us  -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>How did you hear about us</h5>
-
-            <div class="card-panel">
-                <select class="input-field col s12" id="howdidyouhear">
-                    <option value="none" disabled selected>Select One</option>
-                    <option value="friend">Word of Mouth/Friend/Colleague</option>
-                    <option value="web">Web/Social Media</option>
-                    <option value="print">Poster/Flyer</option>
-                    <option value="sponsor">Corporate Sponsor</option>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">person</i>
+                <select id="person">
+                    <option value="default">Who's filling out this form?</option>
+                    <option value="student">Student</option>
+                    <option value="parent">Parent</option>
                     <option value="other">Other</option>
                 </select>
-                <br>
-                <br>
-                <!--textarea for when other option is selected-->
-                <div class="input-field col s12" id="other-block">
-                    <textarea id="other2" class="materialize-textarea"></textarea>
-                    <label for="other2">Other</label>
-                </div><!--div-->
-            </div>
-
-        </div>
-
-        <!-- Background Check Notice-->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Consent to Background Check</h5>
-
-            <div class="card-panel">
-                <p>Upon submission of this application I consent to a background check.</p>
-                <p>
-                    <label>
-                        <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="yes"/>
-                        <span>Yes</span>
-                        <label class="form-check-label" for="yes"></label>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="no"/>
-                        <span>No</span>
-                        <label class="form-check-label" for="no"></label>
-                    </label>
-                </p>
-                <div>
-                    <label id="consent" class="hidden">
-                        <p>*Because of our values as an organization and out of the safety of the youth
-                            we serve, it is a requirement that a background check must be submitted. You have
-                            chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
-                            at this time we are unable to move forward with your submission. Please do visit us
-                            again!</p>
-                    </label>
-                </div>
-                <span class="err" id="err-consent">
-                    Please choose a consent option.
-                </span>
+                <label for="person">Select one</label>
             </div>
         </div>
 
+        <form class="col s12" id="volunteer-form">
 
-        <!-- Policy -->
-        <div class="divider"></div>
-        <div class="section">
-            <h5>Policy</h5>
-            <div class="card-panel">
-                <div class="row">
-                    <div class="card-panel">
-                        <h6>By submitting this application, I affirm that the facts set forth in it are true and complete. I understand that if I am accepted as a volunteer, any false statements, omissions, or other misrepresentations made by me on this
-                            application may result in immediate dismissal.
-                        </h6>
+            <!-- Contact Info -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Contact Info</h5>
+
+                <div class="card-panel">
+
+
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate" required>
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate" required>
+                            <label for="last_name">Last Name</label>
+                        </div>
                     </div>
-                    <div class="card-panel">
-                        <h6>It is the policy of this orginization to provide equal opportunities without regard to race, color, religion, national origin, gender, sexual preference, age, or disability.
-                        </h6>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">contact_mail</i>
+                            <input id="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">place</i>
+                            <textarea id="address" class="materialize-textarea"></textarea>
+                            <label for="address">Address</label>
+                            <span class="err" id="err-address">
+                                Please enter your address.
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <i class="material-icons prefix">location_city</i>
+                            <textarea id="city" class="materialize-textarea"></textarea>
+                            <label for="city">City</label>
+                            <span class="err" id="err-city">
+                                Please enter your city.
+                            </span>
+                        </div>
+                        <div class="input-field col s4">
+                            <select id="state">
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="CE">Delaware</option>
+                                <option value="DC">District of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="MV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA" selected="selected">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            
+                            <textarea id="zip" class="materialize-textarea"></textarea>
+                            <label for="zip">Zip Code</label>
+                            <span class="err" id="err-zip">
+                                Please enter your zip code.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">contact_phone</i>
+                            <label for="phone">Phone #</label>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">accessibility</i>
+                            <select id="size">
+                                <option value="" disabled selected>Select a T-shirt Size</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                                <option value="xlarge">X-Large</option>
+                                <option value="xxlarge">XX-Large</option>
+                            </select>
+                        </div>
+                    </div>
+                </div><!-- Card Panel close-->
+            </div><!-- Contact info close-->
+
+            <!-- Interests -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Interests</h5>
+
+                <div class="card-panel" id="interests">
+                    <p>
+                        <label>
+                            <input type="checkbox" id="event" />
+                            <span>Events</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="fundraiser" />
+                            <span>Fundraising</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="newsletter" />
+                            <span>Newsletter</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="volunteer-coordination" />
+                            <span>Volunteer Coordination</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="mentoring" />
+                            <span>Mentoring</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="other-interests" />
+                            <span>Other</span>
+                        </label>
+                    </p>
+                    <div class="input-field col s12" id="other-interest">
+                        <textarea id="other1" class="materialize-textarea"></textarea>
+                        <label for="other1">Other</label>
+                    </div>
+                    <!--div-->
+
+                </div>
+            </div>
+
+            <!-- Special Skills/Qualifications -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Special Skills/Qualifications</h5>
+
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="hobbies" class="materialize-textarea"></textarea>
+                            <label for="hobbies">Summarize special skills and qualifications from employment,
+                                previous
+                                volunteer
+                                work, or other
+                                activities
+                                including sports and hobbies.</label>
+                        </div>
                     </div>
                 </div>
-                <br>
             </div>
+
+
+            <!-- Previous vounteer exprerience -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Previous Volunteer Experience</h5>
+
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12" id="prevExperience">
+                            <textarea id="volunteer-work" class="materialize-textarea"></textarea>
+                            <label for="volunteer-work">Summarize any previous volunteer work you might have done in
+                                the
+                                past.</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" id="noExperience" />
+                                    <span>I have no previous volunteer experience.</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Roles -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Volunteer Roles</h5>
+                <div class="card-panel">
+                    <div class="row">
+                        <div class="input-field col s12" id="rolePref">
+                            <textarea id="volunteer-role" class="materialize-textarea"></textarea>
+                            <label for="volunteer-work">Please detail volunteer roles that interest you. We want to
+                                ensure
+                                we
+                                utilize your skills.</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" id="noPref" />
+                                    <span>I have no preference.</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Availability -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Volunteer Availability</h5>
+
+                <div class="card-panel">
+                    <label>Please select the choices that most fit your volunteer availability: </label>
+                    <p>
+                        <label>
+                            <input type="checkbox" onclick="time();" id="weekends" />
+                            <span>Weekends</span>
+                        </label>
+                    </p>
+                    <label id="availability" class="hours">
+                        Select available hours:<br>
+                        <span>
+                            From: <input type="time" />
+                            To: <input type="time" />
+                        </span>
+                    </label>
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>1 Week Summer Camp</span>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+    </div>
+
+    <!-- References -->
+    <div class="divider"></div>
+    <div class="section">
+        <h5>References</h5>
+
+        <div class="card-panel">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
+                    <div class="collapsible-body">
+                        <!-- First Reference -->
+                        <div class="input-field">
+                            <label for="refFirstName1">Reference First Name</label>
+                            <input type="text" class="form-control" id="refFirstName1" name="refFirstName1">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refLastName1">Reference Last Name</label>
+                            <input type="text" class="form-control" id="refLastName1" name="refLastName1">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refPhone1">Phone #</label>
+                            <input type="number" class="form-control" id="refPhone1" name="refPhone1">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refEmail1">E-mail</label>
+                            <input type="text" class="form-control" id="refEmail1" name="refEmail1">
+                        </div>
+
+                        <div class="input-field">
+
+                            <label for="refRelation1">Relation</label>
+                            <input type="text" class="form-control" id="refRelation1" name="refRelation1">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
+                    <div class="collapsible-body">
+                        <!-- Second Reference -->
+                        <div class="input-field">
+                            <label for="refFirstName2">Reference First Name</label>
+                            <input type="text" class="form-control" id="refFirstName2" name="refFirstName2">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refLastName2">Reference Last Name</label>
+                            <input type="text" class="form-control" id="refLastName2" name="refLastName2">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refPhone2">Phone #</label>
+                            <input type="number" class="form-control" id="refPhone2" name="refPhone2">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="refEmail2">E-mail</label>
+                            <input type="text" class="form-control" id="refEmail2" name="refEmail2">
+                        </div>
+
+                        <div class="input-field">
+
+                            <label for="refRelation2">Relation</label>
+                            <input type="text" class="form-control" id="refRelation2" name="refRelation2">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
+                    <div class="collapsible-body"><span>
+                            <!-- Third Reference -->
+
+                            <div class="input-field">
+                                <label for="refFirstName3">Reference First Name</label>
+                                <input type="text" class="form-control" id="refFirstName3" name="refFirstName3">
+                            </div>
+
+                            <div class="input-field">
+                                <label for="refLastName3">Reference Last Name</label>
+                                <input type="text" class="form-control" id="refLastName3" name="refLastName3">
+                            </div>
+
+                            <div class="input-field">
+                                <label for="refPhone3">Phone #</label>
+                                <input type="number" class="form-control" id="refPhone3" name="refPhone3">
+                            </div>
+
+                            <div class="input-field">
+                                <label for="refEmail3">E-mail</label>
+                                <input type="text" class="form-control" id="refEmail3" name="refEmail3">
+                            </div>
+
+                            <div class="input-field">
+
+                                <label for="refRelation3">Relation</label>
+                                <input type="text" class="form-control" id="refRelation3" name="refRelation3">
+                            </div>
+
+
+                        </span>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <!-- Submit btn -->
-        <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-        </button>
+    </div>
+
+
+
+    <!-- How Did you Hear About us  -->
+    <div class="divider"></div>
+    <div class="section">
+        <h5>How did you hear about us</h5>
+
+        <div class="card-panel">
+            <select class="input-field col s12" id="howdidyouhear">
+                <option value="none" disabled selected>Select One</option>
+                <option value="friend">Word of Mouth/Friend/Colleague</option>
+                <option value="web">Web/Social Media</option>
+                <option value="print">Poster/Flyer</option>
+                <option value="sponsor">Corporate Sponsor</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <br>
+            <!--textarea for when other option is selected-->
+            <div class="input-field col s12" id="other-block">
+                <textarea id="other2" class="materialize-textarea"></textarea>
+                <label for="other2">Other</label>
+            </div>
+            <!--div-->
+        </div>
+
+    </div>
+
+    <!-- Background Check Notice-->
+    <div class="divider"></div>
+    <div class="section">
+        <h5>Consent to Background Check</h5>
+
+        <div class="card-panel">
+            <p>Upon submission of this application I consent to a background check.</p>
+            <p>
+                <label>
+                    <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="yes" />
+                    <span>Yes</span>
+                    <label class="form-check-label" for="yes"></label>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio" id="no" />
+                    <span>No</span>
+                    <label class="form-check-label" for="no"></label>
+                </label>
+            </p>
+            <div>
+                <label id="consent" class="hidden">
+                    <p>*Because of our values as an organization and out of the safety of the youth
+                        we serve, it is a requirement that a background check must be submitted. You have
+                        chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
+                        at this time we are unable to move forward with your submission. Please do visit us
+                        again!</p>
+                </label>
+            </div>
+            <span class="err" id="err-consent">
+                Please choose a consent option.
+            </span>
+        </div>
+    </div>
+
+
+    <!-- Policy -->
+    <div class="divider"></div>
+    <div class="section">
+        <h5>Policy</h5>
+        <div class="card-panel">
+            <div class="row">
+                <div class="card-panel">
+                    <h6>By submitting this application, I affirm that the facts set forth in it are true and
+                        complete. I understand that if I am accepted as a volunteer, any false statements,
+                        omissions, or other misrepresentations made by me on this
+                        application may result in immediate dismissal.
+                    </h6>
+                </div>
+                <div class="card-panel">
+                    <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                        race, color, religion, national origin, gender, sexual preference, age, or disability.
+                    </h6>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <!-- Submit btn -->
+    <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+    </button>
     </form>
 
-</div>
-<!--container-->
+    </div>
+    <!--container-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script src="./scripts/form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
-
-
