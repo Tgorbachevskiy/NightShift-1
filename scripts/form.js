@@ -129,7 +129,7 @@ $(function () {
     youth form validation
  */
 
-function validate() {
+function youthValidate() {
     let Valid = true;
     let errors = document.getElementsByClassName("err");
     for(let i = 0; i < errors.length; i++) {
@@ -192,6 +192,8 @@ function validate() {
     }
 
     return Valid;
+  }
+document.getElementById("youth-volunteer-form").onsubmit = youthValidate;
 
 /*Show or Hide other textarea function
 * for interests
@@ -212,7 +214,7 @@ document.getElementById("volunteer-form").onsubmit = validate;
 
 function validate() {
 
-  var Valid = tru
+  var Valid = true;
   // validates that the address is not blank
   var address = document.getElementById("address").value;
   if (address == "") {
