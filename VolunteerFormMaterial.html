@@ -40,7 +40,9 @@
             </div>
         </div>
 
-        <form class="col s12" id="volunteer-form">
+
+        <form class="col s12" id="volunteer-form" action="confirmation.php" method="post">
+
 
             <!-- Contact Info -->
             <div class="divider"></div>
@@ -71,8 +73,6 @@
                         </div>
                     </div>
 
-
-
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">place</i>
@@ -83,7 +83,6 @@
                             </span>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="input-field col s4">
@@ -158,6 +157,7 @@
                                 Please enter your zip code.
                             </span>
                         </div>
+
                     </div>
 
                     <div class="row">
@@ -182,58 +182,85 @@
                         </div>
                     </div>
                 </div><!-- Card Panel close-->
-            </div><!-- Contact info close-->
+            </div><!-- Contact info close-->         
 
-            <!-- Interests -->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Interests</h5>
 
-                <div class="card-panel" id="interests">
-                    <p>
-                        <label>
-                            <input type="checkbox" id="event" />
-                            <span>Events</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" id="fundraiser" />
-                            <span>Fundraising</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" id="newsletter" />
-                            <span>Newsletter</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" id="volunteer-coordination" />
-                            <span>Volunteer Coordination</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" id="mentoring" />
-                            <span>Mentoring</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input type="checkbox" id="other-interests" />
-                            <span>Other</span>
-                        </label>
-                    </p>
-                    <div class="input-field col s12" id="other-interest">
-                        <textarea id="other1" class="materialize-textarea"></textarea>
-                        <label for="other1">Other</label>
+        <!--If applicant would like to be added to mailing list-->
+        <div class="divider"></div>
+        <div class="section">
+            <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12" id="email-list">
+                        <label>Would you like to be added to our mailing list</label>
+                            <div class="input-field col s12">
+                                <form action="#">
+                                    <p>
+                                        <label>
+                                            <input  class="with-gap" name="mail-list" type="radio" checked/>
+                                            <span>Yes</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="mail-list" type="radio" />
+                                            <span>No</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
                     </div>
-                    <!--div-->
-
                 </div>
             </div>
+        </div>
+        <!-- Interests -->
+        <div class="divider"></div>
+        <div class="section">
+            <h5>Interests</h5>
+
+            <div class="card-panel" id="interests">
+                <p>
+                    <label>
+                        <input type="checkbox" id="event"/>
+                        <span>Events</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="fundraiser"/>
+                        <span>Fundraising</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="newsletter"/>
+                        <span>Newsletter</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="volunteer-coordination"/>
+                        <span>Volunteer Coordination</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="mentoring"/>
+                        <span>Mentoring</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="other-interests"/>
+                        <span>Other</span>
+                    </label>
+                </p>
+                <div class="input-field col s12" id="other-interest">
+                    <textarea id="other1" class="materialize-textarea"></textarea>
+                    <label for="other1">Other</label>
+                </div><!--div-->                   
+          </div>                
+        </div>            
+        </div>
 
             <!-- Special Skills/Qualifications -->
             <div class="divider"></div>
@@ -334,7 +361,9 @@
                     </p>
                 </div>
 
+
             </div>
+
 
     <!-- References -->
     <div class="divider"></div>
@@ -357,10 +386,11 @@
                             <input type="text" class="form-control" id="refLastName1" name="refLastName1">
                         </div>
 
-                        <div class="input-field">
-                            <label for="refPhone1">Phone #</label>
-                            <input type="number" class="form-control" id="refPhone1" name="refPhone1">
-                        </div>
+
+                            <div class="input-field">
+                                <label for="refPhone1">Phone #</label>
+                                <input type="tel" class="form-control" id="refPhone1" name="refPhone1">
+                            </div>
 
                         <div class="input-field">
                             <label for="refEmail1">E-mail</label>
@@ -390,7 +420,7 @@
 
                         <div class="input-field">
                             <label for="refPhone2">Phone #</label>
-                            <input type="number" class="form-control" id="refPhone2" name="refPhone2">
+                            <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
                         </div>
 
                         <div class="input-field">
@@ -421,8 +451,9 @@
                             </div>
 
                             <div class="input-field">
-                                <label for="refPhone3">Phone #</label>
-                                <input type="number" class="form-control" id="refPhone3" name="refPhone3">
+                                <label for="refPhone2">Phone #</label>
+                                <input type="tel" class="form-control" id="refPhone2" name="refPhone2">
+
                             </div>
 
                             <div class="input-field">
@@ -435,8 +466,6 @@
                                 <label for="refRelation3">Relation</label>
                                 <input type="text" class="form-control" id="refRelation3" name="refRelation3">
                             </div>
-
-
                         </span>
                     </div>
                 </li>
