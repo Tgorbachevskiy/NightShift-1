@@ -1,5 +1,144 @@
+
+    /* Icons */
+    
+    .input-field .prefix.active {
+        color: #4493dd !important;
+    }
+    /* Input */
+    
+    .input-field input:focus+label {
+        color: #4493dd !important;
+    }
+    
+    .input-field input:focus {
+        border-bottom: 1px solid #4493dd !important;
+        box-shadow: 0 1px 0 0 #4493dd !important;
+    }
+    /* Textarea */
+    
+    .input-field textarea:focus+label {
+        color: #4493dd !important;
+    }
+    
+    .input-field textarea:focus {
+        border-bottom: 1px solid #4493dd !important;
+        box-shadow: 0 1px 0 0 #4493dd !important;
+    }
+    /* Select */
+    
+    .dropdown-content li>span {
+        color: #4493dd !important;
+    }
+    
+    .select-dropdown li.disabled,
+    .select-dropdown li.disabled>span,
+    .select-dropdown li.optgroup {
+        color: rgba(0, 0, 0, 0.3) !important;
+        background-color: transparent !important;
+    }
+    /* Checkbox */
+    
+    [type="checkbox"]:checked+span:not(.lever):before {
+        top: -4px;
+        left: -5px;
+        width: 12px;
+        height: 22px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid #4493dd !important;
+        border-bottom: 2px solid #4493dd !important;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+    /* Radio */
+    
+    [type="radio"]:checked+span:after,
+    [type="radio"].with-gap:checked+span:before,
+    [type="radio"].with-gap:checked+span:after {
+        border: 2px solid #4493dd !important;
+    }
+    
+    [type="radio"]:checked+span:after,
+    [type="radio"].with-gap:checked+span:after {
+        background-color: #4493dd !important;
+    }
+=======
+/* Icons */
+
+.input-field .prefix.active {
+    color: #4493dd !important;
+}
+/* Input */
+
+.input-field input:focus+label {
+    color: #4493dd !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #4493dd !important;
+    box-shadow: 0 1px 0 0 #4493dd !important;
+}
+/* Textarea */
+
+.input-field textarea:focus+label {
+    color: #4493dd !important;
+}
+
+.input-field textarea:focus {
+    border-bottom: 1px solid #4493dd !important;
+    box-shadow: 0 1px 0 0 #4493dd !important;
+}
+/* Select */
+
+.dropdown-content li>span {
+    color: #4493dd !important;
+}
+
+.select-dropdown li.disabled,
+.select-dropdown li.disabled>span,
+.select-dropdown li.optgroup {
+    color: rgba(0, 0, 0, 0.3) !important;
+    background-color: transparent !important;
+}
+/* Checkbox */
+
+[type="checkbox"]:checked+span:not(.lever):before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #4493dd !important;
+    border-bottom: 2px solid #4493dd !important;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+/* Radio */
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #4493dd !important;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #4493dd !important;
+}
+
 body {
-	background-color: #eceff1;
+
+    background-color: #eceff1;
+
 }
 fieldset {
     border: 1px solid black;
@@ -19,6 +158,33 @@ fieldset {
 #ref5 {
     display: none;
 }
+
+#heads {
+    display: inline-block;
+    width: 100%;
+}
+.header {
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+.img {
+    display: inline-block;
+}
+
+#consent {
+    display: none;
+    color: red;
+}
+
+.err {
+    visibility: hidden;
+    color: red;
+}
+#availability {
+    display: none;
+}
+
 /* .header {
     font-family: Trattatello, fantasy;
     font-weight: bolder;
@@ -30,3 +196,4 @@ h5, .subref {
     font-weight: bold;
     text-align: center;
 } */
+
