@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- favicon -->`
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest_title">
+
+    <title>Dreamer Sign-up</title>
+</head>
+
+<body class="blue-grey lighten-5">
+
+<!--main container-->
+<div class="container">
+    <div class="row">
+        <h1 class="header col s6">Dreamer Sign-up</h1>
+        <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
+    </div>
+
+        <!--form for the youth-->
+        <form class="col s12" id="youth-volunteer-form">
+            <div class="divider"></div>
+            <div class="section">
+
+                <div class="card-panel">
+
+                <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="youth_first_name" type="text" class="validate">
+                    <label for="youth_first_name">First Name</label>
+                    <span class="err" id="err-youth-fname">
+                        Please enter your first name.
+                    </span>
+                </div>
+                <div class="input-field col s6">
+                    <input id="youth_last_name" type="text" class="validate">
+                    <label for="youth_last_name">Last Name</label>
+                    <span class="err" id="err-youth-lname">
+                        Please enter your last name.
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">contact_mail</i>
+                    <input id="youth_email" type="email" class="validate">
+                    <label for="youth_email">Email</label>
+                    <span class="err" id="err-youth-email">
+                        Please enter your email.
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">contact_phone</i>
+                    <label for="youth_phone">Phone #</label>
+                    <input type="number" id="youth_phone">
+                    <span class="err" id="err-youth-phone">
+                        Please enter your phone number.
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">na</i>
+                    <select id="graduation_year">
+                        <option value="none">Select a year</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select>
+                    <label for="graduation_year">What year are you graduating?</label>
+                    <span class="err" id="err-youth-grad">
+                        Please enter your graduation year.
+                    </span>
+                </div>
+
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">na</i>
+                    <input id="college" type="text" class="validate">
+                    <label for="college">What is your college of interest?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">na</i>
+                    <input id="career" type="text" class="validate">
+                    <label for="career">Career Aspirations</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">na</i>
+                    <input id="snacks" type="text" class="validate">
+                    <label for="snacks">What kind of snacks do you like?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">na</i>
+                    <input id="birthday" type="text" class="datepicker">
+                    <label for="birthday">What is your birthday?</label>
+                    <span class="err" id="err-youth-birthday">
+                        Please enter your birthday.
+                    </span>
+                </div>
+            </div>
+            <!--change this to checkboxes-->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">na</i>
+                    <select id="gender">
+                        <option value="none">Select a gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="didnt_say">Prefer not to say</option>
+                    </select>
+                    <label for="gender">What is your Gender?</label>
+                    <span class="err" id="err-youth-gender">
+                        Please enter your gender.
+                    </span>
+                </div>
+
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">na</i>
+                    <select id="ethnicity">
+                        <option value="none">Select an ethnicity</option>
+                        <option value="white">white</option>
+                        <option value="african-american">African American / Black</option>
+                        <option value="hispanic">hispanic / latino</option>
+                        <option value="asian">Asian</option>
+                        <option value="native">Native American</option>
+                    </select>
+                    <label for="ethnicity">What is your ethnicity?</label>
+                    <span class="err" id="err-youth-ethnicity">
+                        Please enter your ethnicity.
+                    </span>
+                </div>
+            </div>
+                </div>
+            </div>
+            <button id="youth_submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+    <!--container-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="./scripts/dreamerForm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+
+</html>
