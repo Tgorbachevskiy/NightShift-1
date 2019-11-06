@@ -43,20 +43,29 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate" required>
+                            <input id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
+                            <span class="err" id="err-fname">
+                                Please enter your first name.
+                            </span>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" required>
+                            <input id="last_name" type="text" class="validate">
                             <label for="last_name">Last Name</label>
+                            <span class="err" id="err-lname">
+                                Please enter your last name.
+                            </span>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_mail</i>
-                            <input name="email" id="email" type="email" class="validate" required>
+                            <input name="email" id="email" type="email" class="validate">
                             <label for="email">Email</label>
+                            <span class="err" id="err-email">
+                                Please enter your email.
+                            </span>
                         </div>
                     </div>
 
@@ -152,6 +161,9 @@
                             <i class="material-icons prefix">contact_phone</i>
                             <label for="phone">Phone #</label>
                             <input type="tel" id="phone" name="phone">
+                            <span class="err" id="err-phone">
+                                Please enter your phone number.
+                            </span>
                         </div>
                     </div>
 
@@ -166,6 +178,9 @@
                                 <option value="xlarge">X-Large</option>
                                 <option value="xxlarge">XX-Large</option>
                             </select>
+                            <span class="err" id="err-size">
+                                Please enter a T-shirt size.
+                            </span>
                         </div>
                     </div>
                 </div><!-- Card Panel close-->
@@ -338,10 +353,9 @@
                         </label>
                     </p>
                     <label id="availability" class="hours">
-                        Select available hours:<br>
+                        Please enter all hours of availability:<br>
                         <span>
-                            From: <input type="time" />
-                            To: <input type="time" />
+                            <textarea id="Ahours"></textarea>
                         </span>
                     </label>
                     <p>
@@ -363,6 +377,9 @@
 
                 <div class="card-panel">
                     <ul class="collapsible">
+                        <span class="err" id="err-ref1">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
                             <div class="collapsible-body">
@@ -394,6 +411,9 @@
                                 </div>
                             </div>
                         </li>
+                        <span class="err" id="err-ref2">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
                             <div class="collapsible-body">
@@ -425,6 +445,9 @@
                                 </div>
                             </div>
                         </li>
+                        <span class="err" id="err-ref3">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
                             <div class="collapsible-body"><span>
