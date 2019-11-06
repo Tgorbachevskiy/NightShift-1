@@ -29,7 +29,7 @@
     </div>
 
         <!--form for the youth-->
-        <form class="col s12" id="youth-volunteer-form">
+        <form class="col s12" id="youth-volunteer-form" action="confirmation.php" method="POST">
             <div class="divider"></div>
             <div class="section">
 
@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">na</i>
-                    <select id="graduation_year">
+                    <select id="graduation_year" name="graduation-year">
                         <option value="none">Select a year</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -94,7 +94,7 @@
 
                 <div class="input-field col s6">
                     <i class="material-icons prefix">na</i>
-                    <input id="college" type="text" class="validate">
+                    <input id="college" name="college" type="text" class="validate">
                     <label for="college">What is your college of interest?</label>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">na</i>
-                    <input id="career" type="text" class="validate">
+                    <input id="career" name="career" type="text" class="validate">
                     <label for="career">Career Aspirations</label>
                 </div>
             </div>
