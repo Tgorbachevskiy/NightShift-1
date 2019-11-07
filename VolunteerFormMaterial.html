@@ -274,7 +274,8 @@
                 <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea placeholder="" id="hobbies" name="hobbies" class="materialize-textarea"></textarea>
+                            <textarea placeholder="" id="hobbies" name="hobbies"
+                                class="materialize-textarea"></textarea>
                             <label for="hobbies">Summarize special skills and qualifications from employment,
                                 previous
                                 volunteer
@@ -345,25 +346,35 @@
                 <h5>Volunteer Availability</h5>
 
                 <div class="card-panel" id="volAvailability" name="volAvailability">
-                    <label>Please select the choices that most fit your volunteer availability: </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" onclick="time();" id="weekends" />
-                            <span>Weekends</span>
-                        </label>
-                    </p>
-                    <label id="availability" class="hours">
-                        Please enter all hours of availability:<br>
-                        <span>
-                            <textarea class="materialize-textarea" id="Ahours"></textarea>
-                        </span>
-                    </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>1 Week Summer Camp</span>
-                        </label>
-                    </p>
+                    <div class="row">
+                        <div class="s12">
+                            <label>Please select the choices that most fit your volunteer availability: </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" onclick="time();" id="weekends" />
+                                    <span>Weekends</span>
+                                </label>
+                            </p>
+
+                        </div>
+                        <div class="input-field col s12" id="availability">
+                            <label for="Ahours" class="hours">
+                            Please enter all hours of availability:</label>
+                            <span>
+                                <textarea class="materialize-textarea" name="Ahours" id="Ahours"></textarea>
+                            </span>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>1 Week Summer Camp</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
