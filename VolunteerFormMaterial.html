@@ -27,22 +27,8 @@
             <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
         </div>
 
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">person</i>
-                <select id="person">
-                    <option value="default">Who's filling out this form?</option>
-                    <option value="student">Student</option>
-                    <option value="parent">Parent</option>
-                    <option value="other">Other</option>
-                </select>
-                <label for="person">Select one</label>
-            </div>
-        </div>
 
-
-        <form class="col s12" action="confirmation.php
-" method="post" id="volunteer-form">
+        <form class="col s12" action="confirmation.php" method="post" id="volunteer-form">
 
 
             <!-- Contact Info -->
@@ -57,27 +43,36 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate" required>
+                            <input id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
+                            <span class="err" id="err-fname">
+                                Please enter your first name.
+                            </span>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" required>
+                            <input id="last_name" type="text" class="validate">
                             <label for="last_name">Last Name</label>
+                            <span class="err" id="err-lname">
+                                Please enter your last name.
+                            </span>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_mail</i>
-                            <input id="email" type="email" class="validate" required>
+                            <input name="email" id="email" type="email" class="validate">
                             <label for="email">Email</label>
+                            <span class="err" id="err-email">
+                                Please enter your email.
+                            </span>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">place</i>
-                            <input id="address" type="text" class="validate"></input>
+                            <input id="address" type="text" class="validate" name="address"></input>
                             <label for="address">Address</label>
                             <span class="err" id="err-address">
                                 Please enter your address.
@@ -88,14 +83,14 @@
                     <div class="row">
                         <div class="input-field col s4">
                             <i class="material-icons prefix">location_city</i>
-                            <input id="city" type="text" class="validate"></input>
+                            <input id="city" name="city" type="text" class="validate"></input>
                             <label for="city">City</label>
                             <span class="err" id="err-city">
                                 Please enter your city.
                             </span>
                         </div>
                         <div class="input-field col s4">
-                            <select id="state">
+                            <select id="state" name="state">
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -152,7 +147,7 @@
 
                         <div class="input-field col s4">
 
-                            <input id="zip" type="text" pattern="[0-9]*" class="validate"></input>
+                            <input name="zip" id="zip" type="text" pattern="[0-9]*" class="validate"></input>
                             <label for="zip">Zip Code</label>
                             <span class="err" id="err-zip">
                                 Please enter your zip code.
@@ -165,14 +160,17 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_phone</i>
                             <label for="phone">Phone #</label>
-                            <input type="tel" id="phone">
+                            <input type="tel" id="phone" name="phone">
+                            <span class="err" id="err-phone">
+                                Please enter your phone number.
+                            </span>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">accessibility</i>
-                            <select id="size">
+                            <select id="size" name="size">
                                 <option value="" disabled selected>Select a T-shirt Size</option>
                                 <option value="small">Small</option>
                                 <option value="medium">Medium</option>
@@ -180,6 +178,9 @@
                                 <option value="xlarge">X-Large</option>
                                 <option value="xxlarge">XX-Large</option>
                             </select>
+                            <span class="err" id="err-size">
+                                Please enter a T-shirt size.
+                            </span>
                         </div>
                     </div>
                 </div><!-- Card Panel close-->
@@ -193,13 +194,13 @@
                 <h5>Mailing List</h5>
                 <div class="card-panel">
                     <div class="row">
-                        <div class="input-field col s12" id="email-list">
+                        <div class="input-field col s12" id="email-list" name="email-list">
                             <p>Would you like to be added to our mailing list</p>
 
 
                             <p>
                                 <label>
-                                    <input class="with-gap" name="mail-list" type="radio"/>
+                                    <input class="with-gap" name="mail-list" type="radio" />
                                     <span>Yes</span>
                                 </label>
                             </p>
@@ -215,12 +216,13 @@
                     </div>
                 </div>
             </div>
+
             <!-- Interests -->
             <div class="divider"></div>
             <div class="section">
                 <h5>Interests</h5>
 
-                <div class="card-panel" id="interests">
+                <div class="card-panel" id="interests" name="interests">
                     <p>
                         <label>
                             <input type="checkbox" id="event" />
@@ -273,7 +275,8 @@
                 <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="hobbies" class="materialize-textarea"></textarea>
+                            <textarea placeholder="" id="hobbies" name="hobbies"
+                                class="materialize-textarea"></textarea>
                             <label for="hobbies">Summarize special skills and qualifications from employment,
                                 previous
                                 volunteer
@@ -294,7 +297,8 @@
                 <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12" id="prevExperience">
-                            <textarea id="volunteer-work" class="materialize-textarea"></textarea>
+                            <textarea placeholder="" id="volunteer-work" name="prevExperience"
+                                class="materialize-textarea"></textarea>
                             <label for="volunteer-work">Summarize any previous volunteer work you might have done in
                                 the
                                 past.</label>
@@ -318,7 +322,8 @@
                 <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12" id="rolePref">
-                            <textarea id="volunteer-role" class="materialize-textarea"></textarea>
+                            <textarea placeholder="" id="volunteer-role" name="rolePref"
+                                class="materialize-textarea"></textarea>
                             <label for="volunteer-work">Please detail volunteer roles that interest you. We want to
                                 ensure
                                 we
@@ -341,27 +346,36 @@
             <div class="section">
                 <h5>Volunteer Availability</h5>
 
-                <div class="card-panel">
-                    <label>Please select the choices that most fit your volunteer availability: </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" onclick="time();" id="weekends" />
-                            <span>Weekends</span>
-                        </label>
-                    </p>
-                    <label id="availability" class="hours">
-                        Select available hours:<br>
-                        <span>
-                            From: <input type="time" />
-                            To: <input type="time" />
-                        </span>
-                    </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>1 Week Summer Camp</span>
-                        </label>
-                    </p>
+                <div class="card-panel" id="volAvailability" name="volAvailability">
+                    <div class="row">
+                        <div class="s12">
+                            <label>Please select the choices that most fit your volunteer availability: </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" onclick="time();" id="weekends" />
+                                    <span>Weekends</span>
+                                </label>
+                            </p>
+
+                        </div>
+                        <div class="input-field col s12" id="availability">
+                            <label for="Ahours" class="hours">
+                                Please enter all hours of availability:</label>
+                            <span>
+                                <textarea class="materialize-textarea" name="Ahours" id="Ahours"></textarea>
+                            </span>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>1 Week Summer Camp</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -375,6 +389,9 @@
 
                 <div class="card-panel">
                     <ul class="collapsible">
+                        <span class="err" id="err-ref1">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i> First Reference</div>
                             <div class="collapsible-body">
@@ -401,12 +418,14 @@
                                 </div>
 
                                 <div class="input-field">
-
                                     <label for="refRelation1">Relation</label>
                                     <input type="text" class="form-control" id="refRelation1" name="refRelation1">
                                 </div>
                             </div>
                         </li>
+                        <span class="err" id="err-ref2">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i>Second Reference</div>
                             <div class="collapsible-body">
@@ -438,6 +457,9 @@
                                 </div>
                             </div>
                         </li>
+                        <span class="err" id="err-ref3">
+                            Please complete the reference.
+                        </span>
                         <li>
                             <div class="collapsible-header"><i class="material-icons">person</i>Third Reference</div>
                             <div class="collapsible-body"><span>
@@ -455,7 +477,7 @@
 
                                     <div class="input-field">
                                         <label for="refPhone3">Phone #</label>
-                                        <input type="tel" class="form-control" id="refPhone3" name="refPhone2">
+                                        <input type="tel" class="form-control" id="refPhone3" name="refPhone3">
 
                                     </div>
 
@@ -485,7 +507,7 @@
                 <h5>How did you hear about us</h5>
 
                 <div class="card-panel">
-                    <select class="input-field col s12" id="howdidyouhear">
+                    <select class="input-field col s12" id="howdidyouhear" name="howdidyouhear">
                         <option value="none" disabled selected>Select One</option>
                         <option value="friend">Word of Mouth/Friend/Colleague</option>
                         <option value="web">Web/Social Media</option>
@@ -504,45 +526,6 @@
                 </div>
 
             </div>
-
-            <!-- Background Check Notice-->
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Consent to Background Check</h5>
-
-                <div class="card-panel">
-                    <p>Upon submission of this application I consent to a background check.</p>
-                    <p>
-                        <label>
-                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
-                                id="yes" />
-                            <span>Yes</span>
-                            <label class="form-check-label" for="yes"></label>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input class="with-gap form-check-input" name="group1" onclick="func();" type="radio"
-                                id="no" />
-                            <span>No</span>
-                            <label class="form-check-label" for="no"></label>
-                        </label>
-                    </p>
-                    <div>
-                        <label id="consent" class="hidden">
-                            <p>*Because of our values as an organization and out of the safety of the youth
-                                we serve, it is a requirement that a background check must be submitted. You have
-                                chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
-                                at this time we are unable to move forward with your submission. Please do visit us
-                                again!</p>
-                        </label>
-                    </div>
-                    <span class="err" id="err-consent">
-                        Please choose a consent option.
-                    </span>
-                </div>
-            </div>
-
 
             <!-- Policy -->
             <div class="divider"></div>
@@ -569,15 +552,54 @@
                 </div>
             </div>
 
-            <!-- Submit btn -->
+
+
+            <!-- Background Check Notice-->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Consent to Background Check</h5>
+
+                <div class="card-panel">
+                    <p>Upon submission of this application I consent to a background check.</p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="backgroundCheck" onclick="func();"
+                                type="radio" id="yes" />
+                            <span>Yes</span>
+                            <label class="form-check-label" for="yes"></label>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="backgroundCheck" onclick="func();"
+                                type="radio" id="no" />
+                            <span>No</span>
+                            <label class="form-check-label" for="no"></label>
+                        </label>
+                    </p>
+                    <div>
+                        <label id="consent" class="hidden">
+                            <p>*Because of our values as an organization and out of the safety of the youth
+                                we serve, it is a requirement that a background check must be submitted. You have
+                                chosen to decline. Thank you for your consideration in volunteering with iD.A.Y.dream,
+                                at this time we are unable to move forward with your submission. Please do visit us
+                                again!</p>
+                        </label>
+                    </div>
+                    <span class="err" id="err-consent">
+                        Please choose a consent option.
+                    </span>
+                </div>
+
+            </div>
+
+
             <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
+
         </form>
-
     </div>
-    <!--container-->
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -587,5 +609,6 @@
     <script src="./scripts/form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 
 </html>
