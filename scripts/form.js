@@ -113,7 +113,7 @@ function validate() {
   var address = document.getElementById("address").value;
   if (address == "") {
     var errAddress = document.getElementById("err-address");
-    errAddress.style.visibility = "visible";
+    errAddress.style.display = "block";
     Valid = false;
   }
 
@@ -121,7 +121,7 @@ function validate() {
   var city = document.getElementById("city").value;
   if (city == "") {
     var errCity = document.getElementById("err-city");
-    errCity.style.visibility = "visible";
+    errCity.style.display = "block";
     Valid = false;
   }
 
@@ -129,7 +129,7 @@ function validate() {
   var zip = document.getElementById("zip").value;
   if (zip == "") {
     var errZip = document.getElementById("err-zip");
-    errZip.style.visibility = "visible";
+    errZip.style.display = "block";
     Valid = false;
   }
 
@@ -137,7 +137,7 @@ function validate() {
     var size = document.getElementById("size").value;
     if (size == "") {
         var errSize = document.getElementById("err-size");
-        errSize.style.visibility = "visible";
+        errSize.style.display = "block";
         Valid = false;
     }
 
@@ -145,7 +145,7 @@ function validate() {
     var fname = document.getElementById("first_name").value;
     if (fname == "") {
         var errfname = document.getElementById("err-fname");
-        errfname.style.visibility = "visible";
+        errfname.style.display = "block";
         Valid = false;
     }
 
@@ -153,7 +153,7 @@ function validate() {
     var lname = document.getElementById("last_name").value;
     if (lname == "") {
         var errlname = document.getElementById("err-lname");
-        errlname.style.visibility = "visible";
+        errlname.style.display = "block";
         Valid = false;
     }
 
@@ -161,7 +161,7 @@ function validate() {
     var phoneNum = document.getElementById("phone").value;
     if(isNaN(phoneNum) || phoneNum == ""){
         var err_phone = document.getElementById("err-phone");
-        err_phone.style.visibility = "visible";
+        err_phone.style.display = "block";
         Valid = false;
     }
 
@@ -169,7 +169,7 @@ function validate() {
     var email = document.getElementById("email").value;
     if (email == "") {
         var errEmail = document.getElementById("err-email");
-        errEmail.style.visibility = "visible";
+        errEmail.style.display = "block";
         Valid = false;
     }
 
@@ -178,7 +178,7 @@ function validate() {
     let N = document.getElementById("no").checked;
     if (Y == false && N == false) {
         let errConsent = document.getElementById("err-consent");
-        errConsent.style.visibility = "visible";
+        errConsent.style.display = "block";
         Valid = false;
     }
 
@@ -191,7 +191,7 @@ function validate() {
 
     if(refN1 == "" || refL1 == "" || refP1 == "" || refE1 == "" || refR1 == "") {
         var errRef1 = document.getElementById("err-ref1");
-        errRef1.style.visibility = "visible";
+        errRef1.style.display = "block";
         Valid = false;
     }
 
@@ -203,7 +203,7 @@ function validate() {
 
     if(refN2 == "" || refL2 == "" || refP2 == "" || refE2 == "" || refR2 == "") {
         var errRef2 = document.getElementById("err-ref2");
-        errRef2.style.visibility = "visible";
+        errRef2.style.display = "block";
         Valid = false;
     }
 
@@ -215,7 +215,7 @@ function validate() {
 
     if(refN3 == "" || refL3 == "" || refP3 == "" || refE3 == "" || refR3 == "") {
         var errRef3 = document.getElementById("err-ref3");
-        errRef3.style.visibility = "visible";
+        errRef3.style.display = "block";
         Valid = false;
     }
 

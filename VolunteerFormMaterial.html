@@ -216,6 +216,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Interests -->
             <div class="divider"></div>
             <div class="section">
@@ -274,7 +275,8 @@
                 <div class="card-panel">
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea placeholder="" id="hobbies" name="hobbies" class="materialize-textarea"></textarea>
+                            <textarea placeholder="" id="hobbies" name="hobbies"
+                                class="materialize-textarea"></textarea>
                             <label for="hobbies">Summarize special skills and qualifications from employment,
                                 previous
                                 volunteer
@@ -345,25 +347,35 @@
                 <h5>Volunteer Availability</h5>
 
                 <div class="card-panel" id="volAvailability" name="volAvailability">
-                    <label>Please select the choices that most fit your volunteer availability: </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" onclick="time();" id="weekends" />
-                            <span>Weekends</span>
-                        </label>
-                    </p>
-                    <label id="availability" class="hours">
-                        Please enter all hours of availability:<br>
-                        <span>
-                            <textarea class="materialize-textarea" id="Ahours"></textarea>
-                        </span>
-                    </label>
-                    <p>
-                        <label>
-                            <input type="checkbox" />
-                            <span>1 Week Summer Camp</span>
-                        </label>
-                    </p>
+                    <div class="row">
+                        <div class="s12">
+                            <label>Please select the choices that most fit your volunteer availability: </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" onclick="time();" id="weekends" />
+                                    <span>Weekends</span>
+                                </label>
+                            </p>
+
+                        </div>
+                        <div class="input-field col s12" id="availability">
+                            <label for="Ahours" class="hours">
+                                Please enter all hours of availability:</label>
+                            <span>
+                                <textarea class="materialize-textarea" name="Ahours" id="Ahours"></textarea>
+                            </span>
+                        </div>
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>1 Week Summer Camp</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -515,6 +527,33 @@
 
             </div>
 
+            <!-- Policy -->
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Policy</h5>
+                <div class="card-panel">
+
+                    <div class="row">
+                        <div class="card-panel">
+                            <h6>By submitting this application, I affirm that the facts set forth in it are true and
+                                complete. I understand that if I am accepted as a volunteer, any false statements,
+                                omissions, or other misrepresentations made by me on this
+                                application may result in immediate dismissal.
+                            </h6>
+                        </div>
+                        <div class="card-panel">
+                            <h6>It is the policy of this orginization to provide equal opportunities without regard to
+                                race, color, religion, national origin, gender, sexual preference, age, or disability.
+                            </h6>
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+
+
+
             <!-- Background Check Notice-->
             <div class="divider"></div>
             <div class="section">
@@ -552,18 +591,23 @@
                     </span>
                 </div>
 
-                <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
+            </div>
 
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                    crossorigin="anonymous"></script>
-                <script src="./scripts/form.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="./scripts/form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 

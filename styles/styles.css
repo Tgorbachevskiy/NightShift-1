@@ -156,10 +156,13 @@ body {
 }
 
 .err {
-    visibility: hidden;
+    display: none;
     color: red;
 }
 #availability {
     display: none;
 }
 
+label {
+    font-size: 1em;
+}
