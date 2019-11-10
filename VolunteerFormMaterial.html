@@ -23,8 +23,7 @@
     <!--main container-->
     <div class="container">
         <div class="row">
-            <h1 class="header col s6">Volunteer Sign-up</h1>
-            <img class="img col offset-s4 s2" src="images/iDayDreamGraphic_trim.png" alt="logo">
+            <h1><img src="images/RegisterToVolunteer.jpg" alt="register photo"></h1>
         </div>
 
 
@@ -180,6 +179,46 @@
                             </select>
                             <span class="err" id="err-size">
                                 Please enter a T-shirt size.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <div class="input-field col s6">
+                                <select id="gender" name="gender">
+                                    <option value="" disabled selected>Select a Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Prefer">Prefer not to say</option>
+                                </select>
+                                <span class="err" id="err-gender">
+                                    Please select a gender.
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input-field col s6">
+                                <select id="ethnicity" name="ethnicity" onchange="Other(this.value);">
+                                    <option value="" disabled selected>Select ethnicity</option>
+                                    <option value="White">White</option>
+                                    <option value="Black">African American/Black</option>
+                                    <option value="Hispanic">Hispanic/Latino</option>
+                                    <option value="Asian">Asian</option>
+                                    <option value="Native">Native American</option>
+                                    <option value="Other">other</option>
+                                </select>
+                                <span class="err" id="err-ethnicity">
+                                    Please select your ethnicity.
+                                </span>
+                            </div>
+                            <div class="row input-field col s6" id="E-other">
+                                <p>Other(please specify)</p>
+                                <textarea class="materialize-textarea"></textarea>
+                            </div>
+                            <span class="err" id="err-other">
+                                    Please specify ethnicity.
                             </span>
                         </div>
                     </div>

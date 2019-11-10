@@ -67,6 +67,15 @@ function time() {
   }
 }
 
+function Other(val) {
+    var Other = document.getElementById("E-other");
+    if (val == "Other") {
+        Other.style.display = "block";
+    } else {
+        Other.style.display = "none";
+    }
+}
+
 
 /*Show or Hide other textarea function
 * for how did you hear about us
@@ -138,6 +147,22 @@ function validate() {
     if (size == "") {
         var errSize = document.getElementById("err-size");
         errSize.style.display = "block";
+        Valid = false;
+    }
+
+    // validates that Gender is selected
+    var gender = document.getElementById("gender").value;
+    if (gender == "") {
+        var errGender = document.getElementById("err-gender");
+        errGender.style.display = "block";
+        Valid = false;
+    }
+
+    // validates that ethnicity is selected
+    var ethnicity = document.getElementById("ethnicity").value;
+    if (ethnicity == "") {
+        var errEthnicity = document.getElementById("err-ethnicity");
+        errEthnicity.style.display = "block";
         Valid = false;
     }
 
