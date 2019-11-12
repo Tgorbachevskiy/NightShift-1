@@ -144,18 +144,23 @@
 
                 <div class="input-field col s6">
                     <i class="material-icons prefix">na</i>
-                    <select id="ethnicity">
+                    <select id="ethnicity" onchange="Other(this.value);">
                         <option value="none">Select an ethnicity</option>
                         <option value="white">white</option>
                         <option value="african-american">African American / Black</option>
                         <option value="hispanic">hispanic / latino</option>
                         <option value="asian">Asian</option>
                         <option value="native">Native American</option>
+                        <option value="other">Other</option>
                     </select>
                     <label for="ethnicity">What is your ethnicity?</label>
                     <span class="err" id="err-youth-ethnicity">
                         Please enter your ethnicity.
                     </span>
+                </div>
+                <div class="row input-field col s6" id="E-other">
+                    <p>Other(please specify)</p>
+                    <textarea class="materialize-textarea"></textarea>
                 </div>
             </div>
                 </div>

@@ -146,8 +146,15 @@ body {
 
     text-align: center;
 }
-.img {
-    display: inline-block;
+
+#E-other {
+    display: none;
+    float: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 #consent {

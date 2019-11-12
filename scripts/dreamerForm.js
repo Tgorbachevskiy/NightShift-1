@@ -25,10 +25,21 @@ $(document).ready(function(){
     $('.datepicker').datepicker();
 });
 
+function Other(val) {
+    var Other = document.getElementById("E-other");
+    if (val == "other") {
+        Other.style.display = "block";
+    } else {
+        Other.style.display = "none";
+    }
+}
+
 
 /*
     youth form validation
  */
+
+document.getElementById("youth-volunteer-form").onsubmit = youthValidate;
 
 function youthValidate() {
     let Valid = true;
@@ -94,4 +105,3 @@ function youthValidate() {
 
     return Valid;
   }
-document.getElementById("youth-volunteer-form").onsubmit = youthValidate;
