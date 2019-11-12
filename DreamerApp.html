@@ -38,14 +38,14 @@
                 <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="youth_first_name" type="text" class="validate">
+                    <input id="youth_first_name" type="text" class="validate" name="youth_first_name">
                     <label for="youth_first_name">First Name</label>
                     <span class="err" id="err-youth-fname">
                         Please enter your first name.
                     </span>
                 </div>
                 <div class="input-field col s6">
-                    <input id="youth_last_name" type="text" class="validate">
+                    <input id="youth_last_name" type="text" class="validate" name="youth_last_name">
                     <label for="youth_last_name">Last Name</label>
                     <span class="err" id="err-youth-lname">
                         Please enter your last name.
@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">contact_mail</i>
-                    <input id="youth_email" type="email" class="validate">
+                    <input id="youth_email" type="email" class="validate" name="youth_email">
                     <label for="youth_email">Email</label>
                     <span class="err" id="err-youth-email">
                         Please enter your email.
@@ -68,7 +68,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">contact_phone</i>
                     <label for="youth_phone">Phone #</label>
-                    <input type="number" id="youth_phone">
+                    <input type="number" id="youth_phone" name="youth_phone">
                     <span class="err" id="err-youth-phone">
                         Please enter your phone number.
                     </span>
@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">na</i>
-                    <input id="snacks" type="text" class="validate">
+                    <input id="snacks" type="text" class="validate" name="snacks">
                     <label for="snacks">What kind of snacks do you like?</label>
                 </div>
             </div>
@@ -118,7 +118,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">na</i>
-                    <input id="birthday" type="text" class="datepicker">
+                    <input id="birthday" type="text" class="datepicker" name="birthday">
                     <label for="birthday">What is your birthday?</label>
                     <span class="err" id="err-youth-birthday">
                         Please enter your birthday.
@@ -129,7 +129,7 @@
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">na</i>
-                    <select id="gender">
+                    <select id="gender" name="gender">
                         <option value="none">Select a gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -144,7 +144,7 @@
 
                 <div class="input-field col s6">
                     <i class="material-icons prefix">na</i>
-                    <select id="ethnicity">
+                    <select id="ethnicity" name="ethnicity">
                         <option value="none">Select an ethnicity</option>
                         <option value="white">white</option>
                         <option value="african-american">African American / Black</option>
