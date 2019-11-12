@@ -22,7 +22,10 @@ $("#youth_submit").mouseout(function () {
     date picker birthday for the youth form
  */
 $(document).ready(function(){
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        yearRange: 20
+    });
 });
 
 function Other(val) {
