@@ -24,7 +24,7 @@ $("#youth_submit").mouseout(function () {
 $(document).ready(function(){
     $('.datepicker').datepicker({
         format: 'yyyy-mm-dd',
-        yearRange: 20;
+        yearRange: 20
     });
 });
 
