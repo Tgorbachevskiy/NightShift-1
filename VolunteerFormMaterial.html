@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- favicon -->`
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest_title">
 
     <title>Volunteer Sign-up</title>
@@ -22,12 +22,13 @@
 
     <!--main container-->
     <div class="container">
-        <div class="row">
+        <div class="row"> 
             <h1 class="center"><img src="images/RegisterToVolunteer.jpg" alt="register photo"></h1>
         </div>
 
 
-        <form class="col s12" action="confirmation.php" method="post" id="volunteer-form">
+
+        <form class="col s12" action="add-volunteer.php" method="post" id="volunteer-form">
 
 
             <!-- Contact Info -->
@@ -42,14 +43,14 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate">
+                            <input id="first_name" type="text" class="validate" name="first_name">
                             <label for="first_name">First Name</label>
                             <span class="err" id="err-fname">
                                 Please enter your first name.
                             </span>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate">
+                            <input id="last_name" type="text" class="validate" name="last_name">
                             <label for="last_name">Last Name</label>
                             <span class="err" id="err-lname">
                                 Please enter your last name.
@@ -182,46 +183,6 @@
                             </span>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div>
-                            <div class="input-field col s6">
-                                <select id="gender" name="gender">
-                                    <option value="" disabled selected>Select a Gender</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Other">Other</option>
-                                    <option value="Prefer">Prefer not to say</option>
-                                </select>
-                                <span class="err" id="err-gender">
-                                    Please select a gender.
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="input-field col s6">
-                                <select id="ethnicity" name="ethnicity" onchange="Other(this.value);">
-                                    <option value="" disabled selected>Select ethnicity</option>
-                                    <option value="White">White</option>
-                                    <option value="Black">African American/Black</option>
-                                    <option value="Hispanic">Hispanic/Latino</option>
-                                    <option value="Asian">Asian</option>
-                                    <option value="Native">Native American</option>
-                                    <option value="Other">other</option>
-                                </select>
-                                <span class="err" id="err-ethnicity">
-                                    Please select your ethnicity.
-                                </span>
-                            </div>
-                            <div class="row input-field col s6" id="E-other">
-                                <p>Other(please specify)</p>
-                                <textarea class="materialize-textarea"></textarea>
-                            </div>
-                            <span class="err" id="err-other">
-                                    Please specify ethnicity.
-                            </span>
-                        </div>
-                    </div>
                 </div><!-- Card Panel close-->
 
             </div><!-- Contact info close-->
@@ -232,27 +193,19 @@
             <div class="section">
                 <h5>Mailing List</h5>
                 <div class="card-panel">
-                    <div class="row">
-                        <div class="input-field col s12" id="email-list" name="email-list">
-                            <p>Would you like to be added to our mailing list</p>
-
-
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="mail-list" type="radio" />
-                                    <span>Yes</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="mail-list" type="radio" />
-                                    <span>No</span>
-                                </label>
-                            </p>
-
-
-                        </div>
-                    </div>
+                    <p>Would you like to be added to our mailing list</p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="email-list" type="radio" id="yes" />
+                            <span>Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap form-check-input" name="email-list" type="radio" id="no" />
+                            <span>No</span>
+                        </label>
+                    </p>
                 </div>
             </div>
 
@@ -316,10 +269,12 @@
                         <div class="input-field col s12">
                             <textarea placeholder="" id="hobbies" name="hobbies"
                                 class="materialize-textarea"></textarea>
-                            <label for="hobbies">Summarize special skills and qualifications from employment or other
+                            <label for="hobbies">Summarize special skills and qualifications from employment,
                                 previous
                                 volunteer
-                                work</label>
+                                work, or other
+                                activities
+                                including sports and hobbies.</label>
                         </div>
                     </div>
                 </div>
@@ -631,12 +586,11 @@
             </div>
 
 
-            <button id="submit" class="btn waves-effect waves-light red" type="submit" name="action">Submit
+            <button id="submit" class="btn waves-effect waves-light red" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
 
         </form>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -644,7 +598,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="./scripts/form.js"></script>
+    <script src="scripts/form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 

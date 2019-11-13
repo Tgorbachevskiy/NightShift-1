@@ -135,26 +135,14 @@
     background-color: #4493dd !important;
 }
 
-body {
-
-    background-color: #eceff1;
-
-}
 
 .header {
     display: inline-block;
 
     text-align: center;
 }
-
-#E-other {
-    display: none;
-    float: right;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+img{
+    max-width: 50%;
 }
 
 #consent {
@@ -172,4 +160,8 @@ img {
 
 label {
     font-size: 1em;
+}
+
+#E-other {
+    display: none;
 }

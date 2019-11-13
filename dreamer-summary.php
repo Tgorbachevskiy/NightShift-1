@@ -16,6 +16,12 @@
     <title>Dreamer Summary</title>
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<!--    <link rel="stylesheet" href="styles/styles.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <style>body{
+            background-color: white;
+        }</style>
 </head>
 <body>
 <div class="container">
@@ -25,19 +31,20 @@
 
     require('/home/nightshi/connect.php');
 
-    $sql = 'SELECT dreamer_id, youth_first_name, youth_last_name, youth_email, youth_phone, graduation_year,
-    college, career, snacks, birthday, gender, ethnicity_id, ethnicity, ethnicity_id
+    $sql = "SELECT dreamer_id, youth_first_name, youth_last_name, youth_email, youth_phone, graduation_year,
+    college, career, snacks, birthday, gender, ethnicity_id, ethnicity, ethnicity_id, timeFilled 
     FROM dreamers 
-    ORDER BY youth_last_name, youth_first_name';
+    ORDER BY timeFilled DESC ";
 
     //send the query to the database
     $result = @mysqli_query($cnxn, $sql);
     //var_dump($result);
 ?>
 
-    <table id="dreamers-table" class="display">
+    <table id="dreamers-table" class="striped responisive-table">
         <thead>
         <tr>
+            <th>Time Filled</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
@@ -48,6 +55,7 @@
             <th>Birthday</th>
             <th>Gender</th>
             <th>Ethnicity</th>
+
         </tr>
         </thead>
         <tbody>
@@ -55,7 +63,7 @@
         <?php
         //print the results
         while ($row = mysqli_fetch_assoc($result)) {
-            //$dDreamerId = $row['dreamer_id'];
+            $timestamp = $row['timeFilled'];
             $first = $row['youth_first_name'];
             $last = $row['youth_last_name'];
             $email = $row['youth_email'];
@@ -68,7 +76,8 @@
             $gender = $row['gender'];
             $ethnicity = $row['ethnicity'];
 
-            echo "<tr>                                  
+            echo "<tr>                    
+            <td>$timestamp</td>              
             <td>$first $last</td>
             <td>$email</td>
             <td>$phone</td>
@@ -92,9 +101,13 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+
 
 <script>
-    $('#dreamers-table').DataTable();
+    $('#dreamers-table').DataTable({
+        "order": [[0,"desc"]]
+    });
 </script>
 
 </body>
