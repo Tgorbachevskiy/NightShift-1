@@ -1,10 +1,8 @@
-//Initialize select
+//Initialize
 $(document).ready(function () {
   $('select').formSelect();
-});
-//Initialize collapsible for references
-$(document).ready(function(){
   $('.collapsible').collapsible();
+  $('dreamers-table').DataTable();
 });
 
 /*

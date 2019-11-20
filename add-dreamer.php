@@ -127,15 +127,14 @@
             $isValid = false;
         }
 
-        //
-
+        
         //Validating ethnicity
-        if (!empty($_POST['ethnicity'])) {
+        if ($_POST['ethnicity'] != "other") {
             $ethnicity = mysqli_real_escape_string($cnxn, trim($_POST['ethnicity']));
-        } elseif (!empty($POST['ethnicity-other'])) {
-            $ethnicity = mysqli_real_escape_string($cnxn, trim($POST['ethnicity-other']));
+        } elseif (!empty($_POST['ethnicity-other']) && $_POST['ethnicity'] == "other") {
+            $ethnicity = mysqli_real_escape_string($cnxn, trim($_POST['ethnicity-other']));
         } else {
-            echo '<p>Please choose an ethar Other = document.getElemenicity.</p>';
+            echo '<p>Please choose an ethnicity.</p>';
             $isValid = false;
         }
 
