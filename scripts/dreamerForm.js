@@ -95,6 +95,28 @@ function youthValidate() {
         Valid = false;
     }
 
+    let Pname = document.getElementById("parent").value;
+    if(Pname = "") {
+        let errPname = document.getElementById("err-parent");
+        errPname.style.visibility = "visible";
+        Valid = false;
+    }
+
+    let Pemail = document.getElementById("parent_email").value;
+    if(Pemail = "") {
+        let errPemail = document.getElementById("err-parent_email");
+        errPemail.style.visibility = "visible";
+        Valid = false;
+    }
+
+    let PNum = document.getElementById("parent_phone").value;
+    if(isNaN(PNum) || PNum == ""){
+        let errPNumber = document.getElementById("err-parent_phone");
+        errPNumber.style.visibility = "visible";
+        Valid = false;
+    }
+
+
     return Valid;
   }
 document.getElementById("youth-volunteer-form").onsubmit = youthValidate;

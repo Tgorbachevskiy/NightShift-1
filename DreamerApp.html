@@ -24,7 +24,7 @@
     <!--main container-->
     <div class="container">
         <div class="row">
-            <img class="center col s6" src="images/DreamerBanner.jpg" alt="register photo">
+            <img class="center col s6" src="images/DreamerBanner.jpg" id="headerIMG" alt="register photo">
             <h1 class="col s6 center">Become A Dreamer!</h1>
         </div>
 
@@ -166,6 +166,36 @@
                         </div>
 
                     </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="parent" type="text" name="parent">
+                        <label for="parent">Enter Parent/Guardian name (First, Last)</label>
+                        <span class="err" id="err-parent">
+                                Please enter your parent/guardian name.
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">contact_mail</i>
+                            <input id="parent_email" type="email" name="parent_email">
+                            <label for="parent_email">Parent/Guardian Email*</label>
+                            <span class="err" id="err-parent_email">
+                                Please enter your parent/guardian email.
+                            </span>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">contact_phone</i>
+                            <input type="number" id="parent_phone" name="parent_phone">
+                            <label for="parent_phone">Parent/Guardian Phone #*</label>
+                            <span class="err" id="err-parent_phone">
+                                Please enter your parent/guardian phone number.
+                            </span>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <button id="youth_submit" class="btn waves-effect waves-light red" name="action">Submit

@@ -141,8 +141,10 @@
 
     text-align: center;
 }
-img{
+
+#headerIMG {
     max-width: 50%;
+    max-height: 50%;
 }
 
 #consent {
@@ -163,5 +165,9 @@ label {
 }
 
 #E-other {
+    display: none;
+}
+
+#mail {
     display: none;
 }

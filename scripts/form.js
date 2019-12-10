@@ -1,8 +1,7 @@
 //Initialize
 $(document).ready(function () {
-  $('select').formSelect();
-  $('.collapsible').collapsible();
-  $('dreamers-table').DataTable();
+    $('select').formSelect();
+    $('.collapsible').collapsible();
 });
 
 /*
@@ -40,20 +39,29 @@ $("#other-interests").change(function () {
 });
 
 
+// function to display message if user selects no from the
+// consent radio buttons
+$("#no").click(function() {
+    document.getElementById("consent").style.display = "initial";
+});
 
-
+$("#yes").click(function() {
+    document.getElementById("consent").style.display = "none";
+});
 
 // function to display message if user selects no from the
 // consent radio buttons
-function func() {
-  var conN = document.getElementById("no").checked;
-  var con = document.getElementById("consent");
-  if(conN == true) {
-    con.style.display = "block";
-  } else {
-    con.style.display = "none";
-  }
-}
+/*function func() {
+    var conN = document.getElementById("no").checked;
+    var con = document.getElementById("consent");
+    if(conN == true) {
+        con.style.display = "block";
+    } else {
+        con.style.display = "none";
+    }
+}*/
+
+
 
 // toggles the hours that pop up for availability if weekend is selected
 function time() {
@@ -84,9 +92,6 @@ $(function () {
 });
 
 
-
-
-
 /*Show or Hide other textarea function
 * for interests
  */
@@ -106,37 +111,12 @@ document.getElementById("volunteer-form").onsubmit = validate;
 
 function validate() {
 
-  var Valid = true;
-  // validates that the address is not blank
-  var address = document.getElementById("address").value;
-  if (address == "") {
-    var errAddress = document.getElementById("err-address");
-    errAddress.style.display = "block";
-    Valid = false;
-  }
+    var Valid = true;
 
-  // validates that the city is not blank
-  var city = document.getElementById("city").value;
-  if (city == "") {
-    var errCity = document.getElementById("err-city");
-    errCity.style.display = "block";
-    Valid = false;
-  }
-
-  // validates that the zip code is not blank
-  var zip = document.getElementById("zip").value;
-  if (zip == "") {
-    var errZip = document.getElementById("err-zip");
-    errZip.style.display = "block";
-    Valid = false;
-  }
-
-    // validates that T-shirt size is selected
-    var size = document.getElementById("size").value;
-    if (size == "") {
-        var errSize = document.getElementById("err-size");
-        errSize.style.display = "block";
-        Valid = false;
+    //Clear all error messages
+    let errors =document.getElementsByClassName("err");
+    for(let i=0; i<errors.length; i++) {
+        errors[i].style.display = "none";
     }
 
     // validates first name is entered
@@ -155,14 +135,6 @@ function validate() {
         Valid = false;
     }
 
-    //phone number validation
-    var phoneNum = document.getElementById("phone").value;
-    if(isNaN(phoneNum) || phoneNum == ""){
-        var err_phone = document.getElementById("err-phone");
-        err_phone.style.display = "block";
-        Valid = false;
-    }
-
     // validates that email is not empty
     var email = document.getElementById("email").value;
     if (email == "") {
@@ -171,13 +143,58 @@ function validate() {
         Valid = false;
     }
 
-    // validates if a consent option was selected
-    let Y = document.getElementById("yes").checked;
-    let N = document.getElementById("no").checked;
-    if (Y == false && N == false) {
-        let errConsent = document.getElementById("err-consent");
-        errConsent.style.display = "block";
+    // validates that the address is not blank
+    var address = document.getElementById("address").value;
+    if (address == "") {
+        var errAddress = document.getElementById("err-address");
+        errAddress.style.display = "block";
         Valid = false;
+    }
+
+    // validates that the city is not blank
+    var city = document.getElementById("city").value;
+    if (city == "") {
+        var errCity = document.getElementById("err-city");
+        errCity.style.display = "block";
+        Valid = false;
+    }
+
+    // validates that the zip code is not blank
+    var zip = document.getElementById("zip").value;
+    if (zip == "") {
+        var errZip = document.getElementById("err-zip");
+        errZip.style.display = "block";
+        Valid = false;
+    }
+
+    //phone number validation
+    var phoneNum = document.getElementById("phone").value;
+    console.log(phoneNum.length);
+    if(isNaN(phoneNum) || phoneNum == "" || phoneNum.length != 10){
+        var err_phone = document.getElementById("err-phone");
+        err_phone.style.display = "block";
+        Valid = false;
+    }
+
+    // validates that T-shirt size is selected
+    var size = document.getElementById("size").value;
+    if (size == "") {
+        var errSize = document.getElementById("err-size");
+        errSize.style.display = "block";
+        Valid = false;
+    }
+
+    // validates if the mailing list is checked
+    let mail = document.getElementsByName("email-list");
+    let mailValue = "";
+    for(let i = 0; i < mail.length; i++) {
+        if(mail[i].checked) {
+            mailValue = mail[i].value;
+        }
+    }
+    if(mailValue == "") {
+        let errMail = document.getElementById("err-mail");
+        errMail.style.display = "block";
     }
 
     // validates that three references were supplied
@@ -214,6 +231,12 @@ function validate() {
     if(refN3 == "" || refL3 == "" || refP3 == "" || refE3 == "" || refR3 == "") {
         var errRef3 = document.getElementById("err-ref3");
         errRef3.style.display = "block";
+        Valid = false;
+    }
+
+    let consentArr = document.getElementsByName('backgroundCheck');
+
+    if (consentArr[1].checked) {
         Valid = false;
     }
 

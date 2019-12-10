@@ -23,7 +23,7 @@
     <!--main container-->
     <div class="container">
         <div class="row"> 
-            <h1 class="center"><img src="images/RegisterToVolunteer.jpg" alt="register photo"></h1>
+            <h1 class="center"><img id="headerIMG" src="images/RegisterToVolunteer.jpg" alt="register photo"></h1>
         </div>
 
 
@@ -43,14 +43,14 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate" name="first_name">
+                            <input id="first_name" type="text" name="first_name">
                             <label for="first_name">First Name</label>
                             <span class="err" id="err-fname">
                                 Please enter your first name.
                             </span>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" name="last_name">
+                            <input id="last_name" type="text" name="last_name">
                             <label for="last_name">Last Name</label>
                             <span class="err" id="err-lname">
                                 Please enter your last name.
@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">contact_mail</i>
-                            <input name="email" id="email" type="email" class="validate">
+                            <input name="email" id="email" type="text" class="validate">
                             <label for="email">Email</label>
                             <span class="err" id="err-email">
                                 Please enter your email.
@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">place</i>
-                            <input id="address" type="text" class="validate" name="address"></input>
+                            <input id="address" type="text" name="address"></input>
                             <label for="address">Address</label>
                             <span class="err" id="err-address">
                                 Please enter your address.
@@ -83,7 +83,7 @@
                     <div class="row">
                         <div class="input-field col s4">
                             <i class="material-icons prefix">location_city</i>
-                            <input id="city" name="city" type="text" class="validate"></input>
+                            <input id="city" name="city" type="text">
                             <label for="city">City</label>
                             <span class="err" id="err-city">
                                 Please enter your city.
@@ -147,7 +147,7 @@
 
                         <div class="input-field col s4">
 
-                            <input name="zip" id="zip" type="text" pattern="[0-9]*" class="validate"></input>
+                            <input name="zip" id="zip" type="text" pattern="[0-9]*">
                             <label for="zip">Zip Code</label>
                             <span class="err" id="err-zip">
                                 Please enter your zip code.
@@ -196,16 +196,17 @@
                     <p>Would you like to be added to our mailing list</p>
                     <p>
                         <label>
-                            <input class="with-gap form-check-input" name="email-list" type="radio" id="yes" />
+                            <input class="with-gap form-check-input" name="email-list" type="radio" id="mailYes" value="yes"/>
                             <span>Yes</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input class="with-gap form-check-input" name="email-list" type="radio" id="no" />
+                            <input class="with-gap form-check-input" name="email-list" type="radio" id="mailNo" value="no"/>
                             <span>No</span>
                         </label>
                     </p>
+                    <span class="err" id="err-mail">Please enter if you would like to be added to the mailing list</span>
                 </div>
             </div>
 
@@ -217,45 +218,45 @@
                 <div class="card-panel" id="interests" name="interests">
                     <p>
                         <label>
-                            <input type="checkbox" id="event" />
+                            <input type="checkbox" id="events" value="events" name="events"/>
                             <span>Events</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" id="fundraiser" />
+                            <input type="checkbox" id="fundraising" value="fundraising" name="fundraising"/>
                             <span>Fundraising</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" id="newsletter" />
+                            <input type="checkbox" id="newsletter" value="newsletter" name="newsletter"/>
                             <span>Newsletter</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" id="volunteer-coordination" />
+                            <input type="checkbox" id="volunteer-coordination" value="volunteer-coordination" name="volunteer-coordination"/>
                             <span>Volunteer Coordination</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" id="mentoring" />
+                            <input type="checkbox" id="mentoring" value="mentoring" name="mentoring"/>
                             <span>Mentoring</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" id="other-interests" />
+                            <input type="checkbox" id="other-interests" value="other-interests" name="other-interests"/>
                             <span>Other</span>
                         </label>
                     </p>
                     <div class="input-field col s12" id="other-interest">
-                        <textarea id="other1" class="materialize-textarea"></textarea>
+                        <textarea id="other1" class="materialize-textarea" name="other1"></textarea>
                         <label for="other1">Other</label>
                     </div>
-                    <!--div-->
+
                 </div>
             </div>
 
@@ -298,7 +299,7 @@
                         <div class="input-field col s12">
                             <p>
                                 <label>
-                                    <input type="checkbox" id="noExperience" />
+                                    <input type="checkbox" id="noExperience" name="noExperience"/>
                                     <span>I have no previous volunteer experience.</span>
                                 </label>
                             </p>
@@ -324,7 +325,7 @@
                         <div class="input-field col s12">
                             <p>
                                 <label>
-                                    <input type="checkbox" id="noPref" />
+                                    <input type="checkbox" id="noPref" name="noPref"/>
                                     <span>I have no preference.</span>
                                 </label>
                             </p>
@@ -338,7 +339,7 @@
             <div class="section">
                 <h5>Volunteer Availability</h5>
 
-                <div class="card-panel" id="volAvailability" name="volAvailability">
+                <div class="card-panel">
                     <div class="row">
                         <div class="s12">
                             <label>Please select the choices that most fit your volunteer availability: </label>
@@ -346,7 +347,7 @@
                         <div class="input-field col s12">
                             <p>
                                 <label>
-                                    <input type="checkbox" onclick="time();" id="weekends" />
+                                    <input type="checkbox" onclick="time();" id="weekends" name="weekends"/>
                                     <span>Weekends</span>
                                 </label>
                             </p>
@@ -355,14 +356,13 @@
                         <div class="input-field col s12" id="availability">
                             <label for="Ahours" class="hours">
                                 Please enter all hours of availability:</label>
-                            <span>
                                 <textarea class="materialize-textarea" name="Ahours" id="Ahours"></textarea>
-                            </span>
+
                         </div>
                         <div class="input-field col s12">
                             <p>
                                 <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" id="summerCamp" name="summerCamp"/>
                                     <span>1 Week Summer Camp</span>
                                 </label>
                             </p>
@@ -503,7 +503,7 @@
                         <option value="none" disabled selected>Select One</option>
                         <option value="friend">Word of Mouth/Friend/Colleague</option>
                         <option value="web">Web/Social Media</option>
-                        <option value="print">Poster/Flyer</option>
+                        <option value="poster">Poster/Flyer</option>
                         <option value="sponsor">Corporate Sponsor</option>
                         <option value="other">Other</option>
                     </select>
@@ -549,23 +549,31 @@
             <!-- Background Check Notice-->
             <div class="divider"></div>
             <div class="section">
-                <h5>Consent to Background Check</h5>
+                <h5>Disclaimer</h5>
 
                 <div class="card-panel">
-                    <p>Upon submission of this application I consent to a background check.</p>
+                    <p>By submitting this application, I certify that my statements in this application are true, complete
+                        and correct to the best of my knowledge. I further understand that as a part of the volunteer verification
+                        and matching process, additional personal information will be required of me. I hereby authorize
+                        iD.A.Y.dream to contact the references listed and to conduct a background check to determine if I will be
+                        a good fit as a volunteer for the organization. I understand that submitting this application does not
+                        guarantee my participation. I also hereby authorize iD.A.Y.dream without limitation, to copy, publish,
+                        exhibit or distribute photographs or video tapes of my volunteer activities for the purpose of promoting
+                        volunteerism and support. I release and hold harmless from liability any person or organization that provides
+                        information. I also agree to hold harmless iD.A.Y.dream and the officers and volunteers thereof. </p>
                     <p>
                         <label>
-                            <input class="with-gap form-check-input" name="backgroundCheck" onclick="func();"
-                                type="radio" id="yes" />
-                            <span>Yes</span>
+                            <input class="with-gap form-check-input" name="backgroundCheck"
+                                type="radio" id="yes" value="yes">
+                            <span>Agree</span>
                             <label class="form-check-label" for="yes"></label>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input class="with-gap form-check-input" name="backgroundCheck" onclick="func();"
-                                type="radio" id="no" />
-                            <span>No</span>
+                            <input class="with-gap form-check-input" name="backgroundCheck"
+                                type="radio" id="no" value="no"/>
+                            <span>Disagree</span>
                             <label class="form-check-label" for="no"></label>
                         </label>
                     </p>
